@@ -4,12 +4,10 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 interface LogoProps {
-  height?: number
-  width?: number
   className?: string
 }
 
-export function Logo({ height = 40, width = 140, className = '' }: LogoProps) {
+export function Logo({ className = 'h-10 w-auto' }: LogoProps) {
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
@@ -31,7 +29,6 @@ export function Logo({ height = 40, width = 140, className = '' }: LogoProps) {
     <img
       src={isDark ? '/kirulabs-white.png' : '/kirulabs-black.png'}
       alt="Kirulabs"
-      style={{ height: `${height}px`, width: 'auto' }}
       className={className}
     />
   )

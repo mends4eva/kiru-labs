@@ -47,12 +47,12 @@ export default function About() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-white dark:via-slate-900 to-background">
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800">
       {/* Navigation */}
       <nav className="fixed w-full top-0 z-50 glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/">
-            <Logo height={40} width={120} className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+            <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/">
@@ -93,33 +93,33 @@ export default function About() {
                 animation={i % 2 === 0 ? "float" : "float-slow"}
                 delay={i * 0.3}
               >
-                <div className="glass-card group hover:glow-effect transition-all duration-300 flex flex-col h-full">
+                <div className="glass-card group hover:glow-effect transition-all duration-300 flex flex-col h-full hover:border-primary/50">
                   {/* Founder Image */}
-                  <div className="relative mb-6 overflow-hidden rounded-xl">
-                    <div className="aspect-square overflow-hidden rounded-xl border border-white/20">
+                  <div className="relative mb-6 overflow-hidden rounded-2xl">
+                    <div className="aspect-square overflow-hidden rounded-2xl border border-white/30 dark:border-white/20">
                       <img
                         src={founder.image}
                         alt={founder.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
                   {/* Info */}
-                  <h3 className="text-2xl font-bold mb-1">{founder.name}</h3>
-                  <p className="text-primary font-semibold mb-4">{founder.title}</p>
-                  <p className="text-foreground/70 flex-grow mb-6">{founder.bio}</p>
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{founder.name}</h3>
+                  <p className="text-primary/80 font-semibold mb-4 text-sm">{founder.title}</p>
+                  <p className="text-foreground/70 flex-grow mb-6 leading-relaxed">{founder.bio}</p>
 
                   {/* Social Links */}
-                  <div className="flex gap-3">
+                  <div className="flex gap-2">
                     {founder.socials.map((social, idx) => {
                       const Icon = social.icon
                       return (
                         <a
                           key={idx}
                           href={social.link}
-                          className="glass-button-icon hover:text-primary transition-colors"
+                          className="glass-button-icon text-foreground/70 hover:text-primary transition-all duration-300"
                         >
                           <Icon size={18} />
                         </a>
@@ -134,10 +134,11 @@ export default function About() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card space-y-6">
-            <h2 className="text-4xl font-bold">Our Story</h2>
+          <FloatingElement animation="float-slow" delay={0}>
+            <div className="glass-card space-y-6 hover:border-primary/50 transition-all duration-300 hover:glow-effect">
+              <h2 className="text-4xl font-bold">Our Story</h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
               Kirulabs was born from a simple belief: the future of user interfaces lies in the intersection of beauty, performance, and innovation. Our three founders—Sarah, Marcus, and Elena—met at a design conference in 2023 and immediately recognized their shared vision.
             </p>
@@ -147,14 +148,15 @@ export default function About() {
             <p className="text-lg text-foreground/70 leading-relaxed">
               Today, Kirulabs empowers thousands of creators worldwide to build stunning, performant interfaces that captivate users and drive results. We're just getting started.
             </p>
-          </div>
+            </div>
+          </FloatingElement>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Core Values</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16">Our Core Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -171,9 +173,9 @@ export default function About() {
               }
             ].map((value, i) => (
               <FloatingElement key={i} animation={i % 2 === 0 ? "float" : "float-slow"} delay={i * 0.2}>
-                <div className="glass-card text-center">
-                  <h3 className="text-2xl font-semibold mb-3">{value.title}</h3>
-                  <p className="text-foreground/70">{value.description}</p>
+                <div className="glass-card text-center hover:border-primary/50 transition-all duration-300 hover:glow-effect">
+                  <h3 className="text-2xl font-semibold mb-3 hover:text-primary transition-colors">{value.title}</h3>
+                  <p className="text-foreground/70 leading-relaxed">{value.description}</p>
                 </div>
               </FloatingElement>
             ))}
@@ -182,22 +184,24 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card text-center space-y-8">
-            <h2 className="text-4xl font-bold">Join Our Journey</h2>
-            <p className="text-lg text-foreground/70">
-              Be part of the team building the future of digital design
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button variant="default" size="lg">View Careers</Button>
-              <Link href="/">
-                <Button variant="glass" size="lg" className="w-full gap-2">
-                  Back to Home <ArrowRight size={20} />
-                </Button>
-              </Link>
+          <FloatingElement animation="float" delay={0}>
+            <div className="glass-card text-center space-y-8 border-primary/30 hover:border-primary/60 transition-all duration-300 hover:glow-effect">
+              <h2 className="text-4xl sm:text-5xl font-bold">Join Our Journey</h2>
+              <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+                Be part of the team building the future of digital design with liquid glass innovation
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                <Button variant="default" size="lg">View Careers</Button>
+                <Link href="/" className="block">
+                  <Button variant="glass" size="lg" className="w-full gap-2">
+                    Back to Home <ArrowRight size={20} />
+                  </Button>
+                </Link>
+              </div>
             </div>
-          </div>
+          </FloatingElement>
         </div>
       </section>
 

@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Bear Solutions - Enterprise Innovation Platform',
-  description: 'Transform your business with cutting-edge technology and innovative solutions from Bear Solutions',
+  title: 'Kirulabs - Enterprise Innovation Platform',
+  description: 'Transform your business with cutting-edge technology and innovative solutions from Kirulabs',
   generator: 'v0.app',
   icons: {
     icon: [

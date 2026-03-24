@@ -28,13 +28,11 @@ export function Logo({ height = 40, width = 140, className = '' }: LogoProps) {
   }, [])
 
   return (
-    <Image
+    <img
       src={isDark ? '/kirulabs-white.png' : '/kirulabs-black.png'}
       alt="Kirulabs"
-      height={height}
-      width={width}
+      style={{ height: `${height}px`, width: 'auto' }}
       className={className}
-      priority
     />
   )
 }

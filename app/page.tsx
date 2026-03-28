@@ -56,13 +56,13 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Floating Background Elements */}
-        <FloatingElement animation="float" delay={0} className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <FloatingElement animation="float-slow" delay={1} className="absolute bottom-20 left-10 w-96 h-96 bg-purple-300/10 dark:bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+        {/* Gradient Background Elements */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center space-y-8 mb-16">
-            <FloatingElement animation="float" delay={0.2}>
+            <FloatingElement>
               <div className="inline-flex items-center gap-2 px-4 py-2 glass-card text-sm font-medium">
                 <Sparkles size={16} className="text-primary" />
                 <span>Welcome to Kirulabs</span>
@@ -90,35 +90,29 @@ export default function Home() {
 
           {/* Feature Preview Cards */}
           <div className="grid md:grid-cols-3 gap-6">
-            <FloatingElement animation="float" delay={0}>
-              <div className="glass-card group hover:glow-effect transition-all duration-300 hover:border-primary/50">
-                <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Zap className="text-primary" size={28} />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Lightning Fast</h3>
-                <p className="text-foreground/70 leading-relaxed">Optimized performance for seamless user experience and instant responsiveness</p>
+            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50">
+              <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 smooth-all">
+                <Zap className="text-primary" size={28} />
               </div>
-            </FloatingElement>
+              <h3 className="text-xl font-semibold mb-3">Lightning Fast</h3>
+              <p className="text-foreground/70 leading-relaxed">Optimized performance for seamless user experience and instant responsiveness</p>
+            </div>
 
-            <FloatingElement animation="float-slow" delay={0.5}>
-              <div className="glass-card group hover:glow-effect transition-all duration-300 hover:border-primary/50">
-                <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Shield className="text-primary" size={28} />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Secure & Trusted</h3>
-                <p className="text-foreground/70 leading-relaxed">Enterprise-grade security with compliance standards and data protection</p>
+            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50">
+              <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 smooth-all">
+                <Shield className="text-primary" size={28} />
               </div>
-            </FloatingElement>
+              <h3 className="text-xl font-semibold mb-3">Secure & Trusted</h3>
+              <p className="text-foreground/70 leading-relaxed">Enterprise-grade security with compliance standards and data protection</p>
+            </div>
 
-            <FloatingElement animation="float-reverse" delay={1}>
-              <div className="glass-card group hover:glow-effect transition-all duration-300 hover:border-primary/50">
-                <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Rocket className="text-primary" size={28} />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Future Ready</h3>
-                <p className="text-foreground/70 leading-relaxed">Built with next-generation technologies for tomorrow's challenges</p>
+            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50">
+              <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 smooth-all">
+                <Rocket className="text-primary" size={28} />
               </div>
-            </FloatingElement>
+              <h3 className="text-xl font-semibold mb-3">Future Ready</h3>
+              <p className="text-foreground/70 leading-relaxed">Built with next-generation technologies for tomorrow's challenges</p>
+            </div>
           </div>
         </div>
       </section>
@@ -133,42 +127,38 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "Beautiful Design", desc: "Stunning liquid glass UI with frosted glass effects and stunning visual hierarchy" },
-              { title: "Smooth Animations", desc: "Fluid, performant animations that bring your interface to life" },
+              { title: "Beautiful Design", desc: "Stunning liquid glass UI with frosted glass effects and visual hierarchy" },
+              { title: "Smooth Transitions", desc: "Fluid, performant interactions that feel natural and responsive" },
               { title: "Dark Mode Support", desc: "Automatic theme switching based on browser preferences" },
               { title: "Responsive Layout", desc: "Perfectly optimized for mobile, tablet, and desktop" },
             ].map((item, i) => (
-              <FloatingElement key={i} animation={i % 2 === 0 ? "float" : "float-slow"} delay={i * 0.2}>
-                <div className="glass-card group hover:glow-effect hover:border-primary/50 transition-all duration-300">
-                  <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
-                  <p className="text-foreground/70 leading-relaxed">{item.desc}</p>
-                </div>
-              </FloatingElement>
+              <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all">
+                <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary smooth-all">{item.title}</h3>
+                <p className="text-foreground/70 leading-relaxed">{item.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <FloatingElement animation="float-slow" delay={0}>
-            <div className="glass-card text-center space-y-8 border-primary/30 hover:border-primary/60 transition-all duration-300 hover:glow-effect">
-              <h2 className="text-4xl sm:text-5xl font-bold">Ready to Transform?</h2>
-              <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-                Join thousands of innovators using Kirulabs to build beautiful, performant interfaces with liquid glass design
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-                <Button variant="default" size="lg" className="gap-2">
-                  Start Free Trial
-                  <ArrowRight size={20} />
-                </Button>
-                <Link href="/about" className="block">
-                  <Button variant="glass" size="lg" className="w-full">Learn About Us</Button>
-                </Link>
-              </div>
+          <div className="glass-card text-center space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect">
+            <h2 className="text-4xl sm:text-5xl font-bold">Ready to Get Started?</h2>
+            <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+              Contact us today to discuss how Kirulabs can transform your digital presence with cutting-edge liquid glass design.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button variant="default" size="lg" className="gap-2">
+                Contact Us
+                <ArrowRight size={20} />
+              </Button>
+              <Link href="/about" className="block">
+                <Button variant="glass" size="lg" className="w-full">About Us</Button>
+              </Link>
             </div>
-          </FloatingElement>
+          </div>
         </div>
       </section>
 
@@ -197,11 +187,11 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
+              <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-foreground transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">GitHub</a></li>
+                <li><a href="#contact" className="hover:text-foreground smooth-all">Contact Us</a></li>
+                <li><a href="#" className="hover:text-foreground smooth-all">Documentation</a></li>
+                <li><a href="#" className="hover:text-foreground smooth-all">Support</a></li>
               </ul>
             </div>
           </div>

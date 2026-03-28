@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
-import { FloatingElement } from "@/components/floating-element"
 import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
@@ -119,7 +118,6 @@ export default function About() {
                       )
                     })}
                   </div>
-                </div>
               </div>
             ))}
           </div>

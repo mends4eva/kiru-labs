@@ -21,13 +21,21 @@ export default function Home() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
-            <a href="/about" className="text-foreground hover:text-primary transition-colors">About</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+            <a href="#features" className="relative text-foreground hover:text-primary smooth-all group">
+              <span className="relative z-10">Features</span>
+              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            </a>
+            <a href="/about" className="relative text-foreground hover:text-primary smooth-all group">
+              <span className="relative z-10">About</span>
+              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            </a>
+            <a href="#contact" className="relative text-foreground hover:text-primary smooth-all group">
+              <span className="relative z-10">Contact</span>
+              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            </a>
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="glass" size="sm">Sign In</Button>
             <Button variant="default" size="sm">Get Started</Button>
           </div>
 
@@ -44,10 +52,9 @@ export default function Home() {
         {isMenuOpen && (
           <div className="md:hidden glass-effect border-t">
             <div className="px-4 py-4 space-y-3">
-              <a href="#features" className="block text-foreground hover:text-primary transition-colors">Features</a>
-              <a href="/about" className="block text-foreground hover:text-primary transition-colors">About</a>
-              <a href="#contact" className="block text-foreground hover:text-primary transition-colors">Contact</a>
-              <Button variant="glass" className="w-full">Sign In</Button>
+              <a href="#features" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Features</a>
+              <a href="/about" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">About</a>
+              <a href="#contact" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Contact</a>
               <Button variant="default" className="w-full">Get Started</Button>
             </div>
           </div>

@@ -222,44 +222,17 @@
   transform: scale(0.95);
 }
 
-/* Floating Animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+/* Smooth transitions - no bouncy animations */
+.smooth-fade {
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(5deg);
-  }
+.smooth-scale {
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes float-reverse {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(15px);
-  }
-}
-
-.float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.float-slow {
-  animation: float-slow 4s ease-in-out infinite;
-}
-
-.float-reverse {
-  animation: float-reverse 3.5s ease-in-out infinite;
+.smooth-all {
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Glow Effects */
@@ -277,4 +250,23 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Menu Link Glass Hover Effect */
+a.group {
+  position: relative;
+  display: inline-block;
+}
+
+a.group .glass-effect {
+  position: absolute;
+  inset: -8px;
+  border-radius: 0.5rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a.group:hover .glass-effect {
+  opacity: 1;
 }

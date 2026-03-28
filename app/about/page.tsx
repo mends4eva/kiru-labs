@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
-import { FloatingElement } from "@/components/floating-element"
 import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
@@ -64,18 +63,16 @@ export default function About() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <FloatingElement animation="float" delay={0} className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <FloatingElement animation="float-slow" delay={1} className="absolute bottom-20 left-10 w-96 h-96 bg-purple-300/10 dark:bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10 text-center space-y-8">
-          <FloatingElement animation="float" delay={0.2}>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-              Meet the
-              <span className="gradient-accent"> Minds</span>
-              <br />
-              Behind Kirulabs
-            </h1>
-          </FloatingElement>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+            Meet the
+            <span className="gradient-accent"> Team</span>
+            <br />
+            Behind Kirulabs
+          </h1>
 
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             Three visionary leaders united by a passion for innovation and design excellence. Together, we're reimagining the future of digital experiences.
@@ -88,46 +85,40 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {founders.map((founder, i) => (
-              <FloatingElement
-                key={founder.id}
-                animation={i % 2 === 0 ? "float" : "float-slow"}
-                delay={i * 0.3}
-              >
-                <div className="glass-card group hover:glow-effect transition-all duration-300 flex flex-col h-full hover:border-primary/50">
-                  {/* Founder Image */}
-                  <div className="relative mb-6 overflow-hidden rounded-2xl">
-                    <div className="aspect-square overflow-hidden rounded-2xl border border-white/30 dark:border-white/20">
-                      <img
-                        src={founder.image}
-                        alt={founder.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div key={founder.id} className="glass-card group hover:glow-effect smooth-all flex flex-col h-full hover:border-primary/50">
+                {/* Founder Image */}
+                <div className="relative mb-6 overflow-hidden rounded-2xl">
+                  <div className="aspect-square overflow-hidden rounded-2xl border border-white/30 dark:border-white/20">
+                    <img
+                      src={founder.image}
+                      alt={founder.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-
-                  {/* Info */}
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{founder.name}</h3>
-                  <p className="text-primary/80 font-semibold mb-4 text-sm">{founder.title}</p>
-                  <p className="text-foreground/70 flex-grow mb-6 leading-relaxed">{founder.bio}</p>
-
-                  {/* Social Links */}
-                  <div className="flex gap-2">
-                    {founder.socials.map((social, idx) => {
-                      const Icon = social.icon
-                      return (
-                        <a
-                          key={idx}
-                          href={social.link}
-                          className="glass-button-icon text-foreground/70 hover:text-primary transition-all duration-300"
-                        >
-                          <Icon size={18} />
-                        </a>
-                      )
-                    })}
-                  </div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-              </FloatingElement>
+
+                {/* Info */}
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{founder.name}</h3>
+                <p className="text-primary/80 font-semibold mb-4 text-sm">{founder.title}</p>
+                <p className="text-foreground/70 flex-grow mb-6 leading-relaxed">{founder.bio}</p>
+
+                {/* Social Links */}
+                <div className="flex gap-2">
+                  {founder.socials.map((social, idx) => {
+                    const Icon = social.icon
+                    return (
+                      <a
+                        key={idx}
+                        href={social.link}
+                        className="glass-button-icon text-foreground/70 hover:text-primary transition-all duration-300"
+                      >
+                        <Icon size={18} />
+                      </a>
+                    )
+                  })}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -136,9 +127,8 @@ export default function About() {
       {/* Story Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <FloatingElement animation="float-slow" delay={0}>
-            <div className="glass-card space-y-6 hover:border-primary/50 transition-all duration-300 hover:glow-effect">
-              <h2 className="text-4xl font-bold">Our Story</h2>
+          <div className="glass-card space-y-6 hover:border-primary/50 smooth-all hover:glow-effect">
+            <h2 className="text-4xl font-bold">Our Story</h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
               Kirulabs was born from a simple belief: the future of user interfaces lies in the intersection of beauty, performance, and innovation. Our three founders—Sarah, Marcus, and Elena—met at a design conference in 2023 and immediately recognized their shared vision.
             </p>
@@ -146,10 +136,9 @@ export default function About() {
               What started as late-night conversations about liquid glass UI has evolved into a comprehensive platform that's changing how developers and designers approach modern interface design. Every feature, every animation, and every glass effect is crafted with precision and purpose.
             </p>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              Today, Kirulabs empowers thousands of creators worldwide to build stunning, performant interfaces that captivate users and drive results. We're just getting started.
+              Today, Kirulabs empowers creators worldwide to build stunning, performant interfaces that captivate users and drive results. We're just getting started.
             </p>
-            </div>
-          </FloatingElement>
+          </div>
         </div>
       </section>
 
@@ -172,12 +161,10 @@ export default function About() {
                 description: "Smooth animations and fast load times are non-negotiable"
               }
             ].map((value, i) => (
-              <FloatingElement key={i} animation={i % 2 === 0 ? "float" : "float-slow"} delay={i * 0.2}>
-                <div className="glass-card text-center hover:border-primary/50 transition-all duration-300 hover:glow-effect">
-                  <h3 className="text-2xl font-semibold mb-3 hover:text-primary transition-colors">{value.title}</h3>
-                  <p className="text-foreground/70 leading-relaxed">{value.description}</p>
-                </div>
-              </FloatingElement>
+              <div key={i} className="glass-card text-center hover:border-primary/50 smooth-all hover:glow-effect">
+                <h3 className="text-2xl font-semibold mb-3 hover:text-primary smooth-all">{value.title}</h3>
+                <p className="text-foreground/70 leading-relaxed">{value.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -186,8 +173,7 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <FloatingElement animation="float" delay={0}>
-            <div className="glass-card text-center space-y-8 border-primary/30 hover:border-primary/60 transition-all duration-300 hover:glow-effect">
+          <div className="glass-card text-center space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect">
               <h2 className="text-4xl sm:text-5xl font-bold">Join Our Journey</h2>
               <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
                 Be part of the team building the future of digital design with liquid glass innovation
@@ -201,7 +187,6 @@ export default function About() {
                 </Link>
               </div>
             </div>
-          </FloatingElement>
         </div>
       </section>
 

@@ -1,8 +1,8 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Logo } from "@/components/logo"
 import { FloatingElement } from "@/components/floating-element"
+import { Meteors } from "@/components/ui/meteors"
 import { ArrowRight, Sparkles, Zap, Shield, Rocket, Menu, X } from 'lucide-react'
 import Link from "next/link"
 import { useState } from "react"
@@ -16,7 +16,6 @@ export default function Home() {
       <nav className="fixed w-full top-0 z-50 glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Logo className="h-10 w-auto" />
           </div>
 
           {/* Desktop Menu */}
@@ -70,6 +69,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Meteors Background */}
+        <Meteors number={30} className="bg-slate-400" />
+        
         {/* Gradient Background Elements */}
         <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -77,10 +79,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center space-y-6 mb-12">
             <FloatingElement>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 glass-card text-xs sm:text-sm font-medium">
-                <Sparkles size={14} className="text-primary" />
-                <span>Welcome to Kirulabs</span>
-              </div>
+              <img 
+                src="/kirulabs-logo.png" 
+                alt="Kirulabs Logo" 
+                className="h-32 sm:h-48 md:h-64 w-auto mx-auto"
+              />
             </FloatingElement>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -187,7 +190,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <Logo className="h-10 w-auto mb-4" />
+              <img src="/kirulabs-logo.png" alt="Kirulabs" className="h-10 w-auto mb-4" />
               <p className="text-sm text-foreground/60">Enterprise innovation made simple</p>
             </div>
             <div>

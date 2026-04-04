@@ -82,7 +82,7 @@ export default function Home() {
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              Experience the future of user interfaces with cutting-edge liquid glass design, smooth animations, and intelligent technology solutions.
+              We believe technology should make life easier, smarter and errot-free. We are dynamic IT and Tech solutions company dedicated to empowering enterprises of all sizes with cutting-edge services that streamline operations and unlock growth
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
@@ -101,16 +101,16 @@ export default function Home() {
               <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
                 <Zap className="text-primary" size={20} />
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Lightning Fast</h3>
-              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">Optimized performance for seamless user experience and instant responsiveness</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Comprehensive Solutions</h3>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">We cover every aspect of IT, so you dont need multile vendors</p>
             </div>
 
             <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6">
               <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
                 <Shield className="text-primary" size={20} />
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Secure & Trusted</h3>
-              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">Enterprise-grade security with compliance standards and data protection</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Error-Free Systems</h3>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">Our Mission is to make work more planned, efficient and less prone to mistakes.</p>
             </div>
 
             <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6 sm:col-span-2 md:col-span-1">
@@ -118,7 +118,7 @@ export default function Home() {
                 <Rocket className="text-primary" size={20} />
               </div>
               <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Future Ready</h3>
-              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">Built with next-generation technologies for tomorrow's challenges</p>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">We combine creativity with technical expertise to deliver solutions that stand out.</p>
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16 space-y-2 sm:space-y-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Why Choose Kirulabs</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/60 max-w-2xl mx-auto">Experience cutting-edge liquid glass UI with unmatched performance and design</p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/60 max-w-2xl mx-auto">We offer the best solutions to your enterprise.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">

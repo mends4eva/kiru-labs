@@ -40,7 +40,9 @@ export default function Home() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="default" size="sm">Get Started</Button>
+            <Link href="/get-started">
+              <Button variant="default" size="sm">Get Started</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,12 +93,16 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-              <Button variant="default" size="sm" className="gap-2 text-sm">
-                Explore <ArrowRight size={16} />
-              </Button>
-              <Button variant="glass" size="sm" className="text-sm">
-                Learn More
-              </Button>
+              <Link href="/ideas">
+                <Button variant="default" size="sm" className="gap-2 text-sm">
+                  Explore <ArrowRight size={16} />
+                </Button>
+              </Link>
+              <Link href="/get-started">
+                <Button variant="glass" size="sm" className="text-sm">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -162,10 +168,12 @@ export default function Home() {
               Contact us today to discuss how Kirulabs can transform your digital presence with cutting-edge liquid glass design.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
-              <Button variant="default" size="sm" className="gap-2 text-sm">
-                Contact Us
-                <ArrowRight size={16} />
-              </Button>
+              <Link href="/get-started" className="block">
+                <Button variant="default" size="sm" className="gap-2 text-sm">
+                  Get Started
+                  <ArrowRight size={16} />
+                </Button>
+              </Link>
               <Link href="/about" className="block">
                 <Button variant="glass" size="sm" className="w-full text-sm">About Us</Button>
               </Link>

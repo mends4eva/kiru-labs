@@ -148,7 +148,9 @@ export default function IdeasPage() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="default" size="sm">Get Started</Button>
+            <Link href="/get-started">
+              <Button variant="default" size="sm">Get Started</Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -225,14 +227,16 @@ export default function IdeasPage() {
                     {idea.description}
                   </p>
 
-                  <Button
-                    variant="glass"
-                    size="sm"
-                    className="w-full gap-2 text-xs sm:text-sm group-hover:bg-white/20 smooth-all"
-                  >
-                    Learn More
-                    <ArrowRight size={14} />
-                  </Button>
+                  <Link href={`/ideas/${idea.id}`} className="w-full">
+                    <Button
+                      variant="glass"
+                      size="sm"
+                      className="w-full gap-2 text-xs sm:text-sm group-hover:bg-white/20 smooth-all"
+                    >
+                      Learn More
+                      <ArrowRight size={14} />
+                    </Button>
+                  </Link>
                 </div>
               )
             })}
@@ -255,10 +259,12 @@ export default function IdeasPage() {
               Let's collaborate to transform these innovative ideas into real solutions that drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
-              <Button variant="default" size="sm" className="gap-2 text-sm">
-                Start a Project
-                <ArrowRight size={16} />
-              </Button>
+              <Link href="/get-started" className="block">
+                <Button variant="default" size="sm" className="gap-2 text-sm">
+                  Start a Project
+                  <ArrowRight size={16} />
+                </Button>
+              </Link>
               <Link href="/" className="block">
                 <Button variant="glass" size="sm" className="w-full text-sm">Back to Home</Button>
               </Link>

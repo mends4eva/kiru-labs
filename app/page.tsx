@@ -134,10 +134,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {[
-              { title: "Beautiful Design", desc: "Stunning liquid glass UI with frosted glass effects and visual hierarchy" },
-              { title: "Smooth Transitions", desc: "Fluid, performant interactions that feel natural and responsive" },
-              { title: "Dark Mode Support", desc: "Automatic theme switching based on browser preferences" },
-              { title: "Responsive Layout", desc: "Perfectly optimized for mobile, tablet, and desktop" },
+              { title: "IT & Software Solutions", desc: "From troubleshooting technical issues to building robust software systems, we ensure your enterprise runs seamlessly.\n" },
+              { title: "Digital Creativity", desc: "Professional publications, engaging presentations, and eye-catching flyers designed to communicate your message with clarity and impact." },
+              { title: "Internet Services", desc: "Everything involving the web: from hosting and online branding to digital strategy and support." },
+              { title: "Videography & Media", desc: "Capturing stories and creating visuals that resonate with audiences, enhancing your brand presence" },
             ].map((item, i) => (
               <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all p-4 sm:p-5 md:p-6">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 group-hover:text-primary smooth-all">{item.title}</h3>

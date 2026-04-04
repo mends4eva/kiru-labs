@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
+import { IdeaCard } from "@/components/idea-card"
 import Link from "next/link"
 import { ArrowRight, Code2, Brain, Globe, Palette, Zap, Shield, Smartphone, Cloud, Lightbulb, Users, Rocket } from 'lucide-react'
 import { useState } from 'react'
@@ -202,42 +203,17 @@ export default function IdeasPage() {
       {/* Ideas Grid */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {filteredIdeas.map((idea) => {
               const IconComponent = idea.icon
               return (
-                <div
+                <IdeaCard
                   key={idea.id}
-                  className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-6 flex flex-col h-full hover:scale-105 transition-transform"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 glass-effect rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-all">
-                      <IconComponent className="text-primary" size={24} />
-                    </div>
-                    <span className="text-xs font-semibold px-3 py-1 glass-effect rounded-full text-primary/80">
-                      {idea.category}
-                    </span>
-                  </div>
-
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 group-hover:text-primary smooth-all">
-                    {idea.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-6 flex-grow">
-                    {idea.description}
-                  </p>
-
-                  <Link href={`/ideas/${idea.id}`} className="w-full">
-                    <Button
-                      variant="glass"
-                      size="sm"
-                      className="w-full gap-2 text-xs sm:text-sm group-hover:bg-white/20 smooth-all"
-                    >
-                      Learn More
-                      <ArrowRight size={14} />
-                    </Button>
-                  </Link>
-                </div>
+                  id={idea.id}
+                  title={idea.title}
+                  description={idea.description}
+                  icon={<IconComponent size={28} />}
+                />
               )
             })}
           </div>

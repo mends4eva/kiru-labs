@@ -82,8 +82,8 @@ export default function Home() {
             </FloatingElement>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Liquid Glass
-              <span className="gradient-accent"> Innovation</span>
+              Your enterprise,
+              <span className="gradient-accent"> our innovation.</span>
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">

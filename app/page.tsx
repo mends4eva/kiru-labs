@@ -25,6 +25,10 @@ export default function Home() {
               <span className="relative z-10">Features</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
+            <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group">
+              <span className="relative z-10">Ideas</span>
+              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            </a>
             <a href="/about" className="relative text-foreground hover:text-primary smooth-all group">
               <span className="relative z-10">About</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
@@ -53,6 +57,7 @@ export default function Home() {
           <div className="md:hidden glass-effect border-t">
             <div className="px-4 py-4 space-y-3">
               <a href="#features" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Features</a>
+              <a href="/ideas" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Ideas</a>
               <a href="/about" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">About</a>
               <a href="#contact" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Contact</a>
               <Button variant="default" className="w-full">Get Started</Button>
@@ -62,86 +67,86 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Gradient Background Elements */}
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center space-y-8 mb-16">
+          <div className="text-center space-y-6 mb-12">
             <FloatingElement>
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass-card text-sm font-medium">
-                <Sparkles size={16} className="text-primary" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 glass-card text-xs sm:text-sm font-medium">
+                <Sparkles size={14} className="text-primary" />
                 <span>Welcome to Kirulabs</span>
               </div>
             </FloatingElement>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Liquid Glass
               <span className="gradient-accent"> Innovation</span>
             </h1>
 
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              Experience the future of user interfaces with cutting-edge liquid glass design, smooth animations, and intelligent technology solutions.
+            <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+              We believe technology should make life easier, smarter and errot-free. We are dynamic IT and Tech solutions company dedicated to empowering enterprises of all sizes with cutting-edge services that streamline operations and unlock growth
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button variant="default" size="lg" className="gap-2">
-                Explore <ArrowRight size={20} />
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+              <Button variant="default" size="sm" className="gap-2 text-sm">
+                Explore <ArrowRight size={16} />
               </Button>
-              <Button variant="glass" size="lg">
+              <Button variant="glass" size="sm" className="text-sm">
                 Learn More
               </Button>
             </div>
           </div>
 
           {/* Feature Preview Cards */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50">
-              <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 smooth-all">
-                <Zap className="text-primary" size={28} />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6">
+              <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
+                <Zap className="text-primary" size={20} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Lightning Fast</h3>
-              <p className="text-foreground/70 leading-relaxed">Optimized performance for seamless user experience and instant responsiveness</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Comprehensive Solutions</h3>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">We cover every aspect of IT, so you dont need multile vendors</p>
             </div>
 
-            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50">
-              <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 smooth-all">
-                <Shield className="text-primary" size={28} />
+            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6">
+              <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
+                <Shield className="text-primary" size={20} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Secure & Trusted</h3>
-              <p className="text-foreground/70 leading-relaxed">Enterprise-grade security with compliance standards and data protection</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Error-Free Systems</h3>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">Our Mission is to make work more planned, efficient and less prone to mistakes.</p>
             </div>
 
-            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50">
-              <div className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 smooth-all">
-                <Rocket className="text-primary" size={28} />
+            <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6 sm:col-span-2 md:col-span-1">
+              <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
+                <Rocket className="text-primary" size={20} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Future Ready</h3>
-              <p className="text-foreground/70 leading-relaxed">Built with next-generation technologies for tomorrow's challenges</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Future Ready</h3>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">We combine creativity with technical expertise to deliver solutions that stand out.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl sm:text-5xl font-bold">Why Choose Kirulabs</h2>
-            <p className="text-lg text-foreground/60 max-w-2xl mx-auto">Experience cutting-edge liquid glass UI with unmatched performance and design</p>
+          <div className="text-center mb-12 sm:mb-16 space-y-2 sm:space-y-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Why Choose Kirulabs</h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/60 max-w-2xl mx-auto">We offer the best solutions to your enterprise.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {[
               { title: "Beautiful Design", desc: "Stunning liquid glass UI with frosted glass effects and visual hierarchy" },
               { title: "Smooth Transitions", desc: "Fluid, performant interactions that feel natural and responsive" },
               { title: "Dark Mode Support", desc: "Automatic theme switching based on browser preferences" },
               { title: "Responsive Layout", desc: "Perfectly optimized for mobile, tablet, and desktop" },
             ].map((item, i) => (
-              <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all">
-                <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary smooth-all">{item.title}</h3>
-                <p className="text-foreground/70 leading-relaxed">{item.desc}</p>
+              <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all p-4 sm:p-5 md:p-6">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 group-hover:text-primary smooth-all">{item.title}</h3>
+                <p className="text-xs sm:text-sm md:text-base text-foreground/70 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -149,20 +154,20 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card text-center space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect">
-            <h2 className="text-4xl sm:text-5xl font-bold">Ready to Get Started?</h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+          <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Ready to Get Started?</h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
               Contact us today to discuss how Kirulabs can transform your digital presence with cutting-edge liquid glass design.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Button variant="default" size="lg" className="gap-2">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
+              <Button variant="default" size="sm" className="gap-2 text-sm">
                 Contact Us
-                <ArrowRight size={20} />
+                <ArrowRight size={16} />
               </Button>
               <Link href="/about" className="block">
-                <Button variant="glass" size="lg" className="w-full">About Us</Button>
+                <Button variant="glass" size="sm" className="w-full text-sm">About Us</Button>
               </Link>
             </div>
           </div>

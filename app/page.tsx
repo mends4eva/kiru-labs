@@ -25,6 +25,10 @@ export default function Home() {
               <span className="relative z-10">Features</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
+            <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group">
+              <span className="relative z-10">Ideas</span>
+              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            </a>
             <a href="/about" className="relative text-foreground hover:text-primary smooth-all group">
               <span className="relative z-10">About</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
@@ -53,6 +57,7 @@ export default function Home() {
           <div className="md:hidden glass-effect border-t">
             <div className="px-4 py-4 space-y-3">
               <a href="#features" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Features</a>
+              <a href="/ideas" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Ideas</a>
               <a href="/about" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">About</a>
               <a href="#contact" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Contact</a>
               <Button variant="default" className="w-full">Get Started</Button>
@@ -134,10 +139,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {[
-              { title: "IT & Software Solutions", desc: "From troubleshooting technical issues to building robust software systems, we ensure your enterprise runs seamlessly.\n" },
-              { title: "Digital Creativity", desc: "Professional publications, engaging presentations, and eye-catching flyers designed to communicate your message with clarity and impact." },
-              { title: "Internet Services", desc: "Everything involving the web: from hosting and online branding to digital strategy and support." },
-              { title: "Videography & Media", desc: "Capturing stories and creating visuals that resonate with audiences, enhancing your brand presence" },
+              { title: "Beautiful Design", desc: "Stunning liquid glass UI with frosted glass effects and visual hierarchy" },
+              { title: "Smooth Transitions", desc: "Fluid, performant interactions that feel natural and responsive" },
+              { title: "Dark Mode Support", desc: "Automatic theme switching based on browser preferences" },
+              { title: "Responsive Layout", desc: "Perfectly optimized for mobile, tablet, and desktop" },
             ].map((item, i) => (
               <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all p-4 sm:p-5 md:p-6">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 group-hover:text-primary smooth-all">{item.title}</h3>

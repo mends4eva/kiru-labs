@@ -53,6 +53,16 @@ export default function About() {
           <Link href="/">
             <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
           </Link>
+          <div className="hidden md:flex items-center gap-6">
+            <a href="/" className="relative text-foreground hover:text-primary smooth-all group text-sm">
+              <span className="relative z-10">Home</span>
+              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            </a>
+            <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group text-sm">
+              <span className="relative z-10">Ideas</span>
+              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            </a>
+          </div>
           <div className="flex items-center gap-4">
             <Link href="/">
               <Button variant="glass" size="sm">Back Home</Button>

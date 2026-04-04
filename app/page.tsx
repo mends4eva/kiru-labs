@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { FloatingElement } from "@/components/floating-element"
+import { Meteors } from "@/components/ui/meteors"
 import { ArrowRight, Sparkles, Zap, Shield, Rocket, Menu, X } from 'lucide-react'
 import Link from "next/link"
 import { useState } from "react"
@@ -68,6 +69,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Meteors Background */}
+        <Meteors number={30} className="bg-slate-400" />
+        
         {/* Gradient Background Elements */}
         <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />

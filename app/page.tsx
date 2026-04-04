@@ -186,7 +186,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <Logo className="h-10 w-auto mb-4" />
+              <img src="/kirulabs-logo.png" alt="Kirulabs" className="h-10 w-auto mb-4" />
               <p className="text-sm text-foreground/60">Enterprise innovation made simple</p>
             </div>
             <div>

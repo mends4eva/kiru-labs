@@ -1,21 +1,17 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { ArrowRight, Mail, Phone, Building2 } from 'lucide-react'
 
 export default function GetStartedPage() {
-  const searchParams = useSearchParams()
-  const preSelectedIdea = searchParams.get('idea') || ''
-
   const [formData, setFormData] = useState({
     companyName: '',
     contactPerson: '',
     email: '',
     phone: '',
-    service: preSelectedIdea,
+    service: '',
     description: '',
   })
 
@@ -23,13 +19,16 @@ export default function GetStartedPage() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    if (preSelectedIdea) {
+    const params = new URLSearchParams(window.location.search)
+    const idea = params.get('idea') || ''
+
+    if (idea) {
       setFormData(prev => ({
         ...prev,
-        service: preSelectedIdea
+        service: idea,
       }))
     }
-  }, [preSelectedIdea])
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target

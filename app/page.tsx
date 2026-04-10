@@ -11,7 +11,16 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="relative min-h-screen bg-black">
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute inset-x-0 top-16 bottom-0 w-full h-[calc(100%-4rem)] object-cover opacity-10 pointer-events-none z-0"
+      >
+        <source src="/funnel-animation.mp4" type="video/mp4" />
+      </video>
+
       {/* Animated Navigation */}
       <nav className="fixed w-full top-0 z-50 glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -71,16 +80,6 @@ export default function Home() {
       <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Meteors Background */}
         <Meteors number={30} className="bg-slate-400" />
-        
-        {/* Funnel Animation Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          className="fixed right-0 top-20 h-[200vh] w-auto opacity-10 pointer-events-none z-0"
-        >
-          <source src="/funnel-animation.mp4" type="video/mp4" />
-        </video>
 
         {/* Gradient Background Elements */}
         <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />

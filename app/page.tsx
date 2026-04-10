@@ -72,6 +72,16 @@ export default function Home() {
         {/* Meteors Background */}
         <Meteors number={30} className="bg-slate-400" />
         
+        {/* Funnel Animation Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-full opacity-10 pointer-events-none"
+        >
+          <source src="/funnel-animation.mp4" type="video/mp4" />
+        </video>
+
         {/* Gradient Background Elements */}
         <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import Loader from '@/components/loader'
 import { ArrowRight, Mail, Phone, Building2 } from 'lucide-react'
 
 export default function GetStartedPage() {
@@ -86,7 +87,12 @@ export default function GetStartedPage() {
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-2xl mx-auto relative z-10">
-          {!submitted ? (
+          {loading ? (
+            <div className="glass-card text-center space-y-6 p-8 sm:p-12">
+              <Loader />
+              <p className="text-foreground/70">Submitting your request…</p>
+            </div>
+          ) : !submitted ? (
             <>
               <div className="text-center mb-12">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Start Your Journey</h1>

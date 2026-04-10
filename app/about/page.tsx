@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Logo } from "@/components/logo"
 import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
@@ -51,7 +50,7 @@ export default function About() {
       <nav className="fixed w-full top-0 z-50 glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/">
-            <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+            <span className="text-xl font-bold text-white hover:text-primary transition-colors">KIRULABS</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="relative text-foreground hover:text-primary smooth-all group text-sm">

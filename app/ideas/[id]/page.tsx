@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Logo } from '@/components/logo'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Zap, Shield, Rocket, Code, Cloud, Brain, Globe, Video } from 'lucide-react'
 import { useParams } from 'next/navigation'
@@ -232,7 +231,7 @@ export default function IdeaDetailPage() {
         <nav className="fixed w-full top-0 z-50 glass-effect border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link href="/">
-              <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+              <span className="text-xl font-bold text-white hover:text-primary transition-colors">KIRULABS</span>
             </Link>
           </div>
         </nav>
@@ -255,7 +254,7 @@ export default function IdeaDetailPage() {
       <nav className="fixed w-full top-0 z-50 glass-effect border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/">
-            <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+            <span className="text-xl font-bold text-white hover:text-primary transition-colors">KIRULABS</span>
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/ideas">

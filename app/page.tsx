@@ -72,6 +72,16 @@ export default function Home() {
         {/* Meteors Background */}
         <Meteors number={30} className="bg-slate-400" />
         
+        {/* Funnel Animation Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="fixed right-0 top-20 h-[200vh] w-auto opacity-10 pointer-events-none z-0"
+        >
+          <source src="/funnel-animation.mp4" type="video/mp4" />
+        </video>
+
         {/* Gradient Background Elements */}
         <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -80,9 +90,9 @@ export default function Home() {
           <div className="text-center space-y-6 mb-12">
             <FloatingElement>
               <img 
-                src="/kirulabs-logo.png" 
+                src="/kiru-logo.png" 
                 alt="Kirulabs Logo" 
-                className="h-32 sm:h-48 md:h-64 w-auto mx-auto"
+                className="h-40 sm:h-56 md:h-72 w-auto mx-auto drop-shadow-lg"
               />
             </FloatingElement>
 
@@ -148,10 +158,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {[
-              { title: "Beautiful Design", desc: "Stunning liquid glass UI with frosted glass effects and visual hierarchy" },
-              { title: "Smooth Transitions", desc: "Fluid, performant interactions that feel natural and responsive" },
-              { title: "Dark Mode Support", desc: "Automatic theme switching based on browser preferences" },
-              { title: "Responsive Layout", desc: "Perfectly optimized for mobile, tablet, and desktop" },
+              { title: "All-in-One Tech Partner", desc: "We provide complete IT and digital solutions under one roof, from software troubleshooting to creative design and videography." },
+              { title: "Error-Free Efficiency", desc: "Our systems are built to make work easier, more organized, and less prone to mistakes, ensuring smooth operations for enterprises." },
+              { title: "Creative + Technical Expertise", desc: "We blend technical problem-solving with creative services like publications, presentations, and flyers to give your brand a powerful edge." },
+              { title: "Future-Driven Innovation", desc: "At Kirulabs, we don't just solve today's problems, we design solutions that prepare your enterprise for tomorrow's challenges." },
             ].map((item, i) => (
               <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all p-4 sm:p-5 md:p-6">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 group-hover:text-primary smooth-all">{item.title}</h3>

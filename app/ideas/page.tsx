@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Logo } from "@/components/logo"
 import { IdeaCard } from "@/components/idea-card"
 import Link from "next/link"
 import { ArrowRight, Code2, Brain, Globe, Palette, Zap, Shield, Smartphone, Cloud, Lightbulb, Users, Rocket } from 'lucide-react'
@@ -129,7 +128,7 @@ export default function IdeasPage() {
       <nav className="sticky top-0 z-50 glass-effect border-b border-white/10 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           <Link href="/">
-            <Logo className="h-8 w-auto cursor-pointer hover:opacity-80 smooth-all" />
+            <span className="text-xl font-bold text-white hover:text-primary smooth-all">KIRULABS</span>
           </Link>
 
           {/* Desktop Menu */}

@@ -30,8 +30,8 @@ export function IdeaCard({ id, title, description, icon }: IdeaCardProps) {
       
       <Link
         href={`/ideas/${id}`}
-        className={`absolute left-1/2 bottom-0 -translate-x-1/2 w-3/5 rounded-2xl bg-blue-500 text-white font-medium px-4 py-2 flex items-center justify-center gap-2 transition-all duration-300 ease-out ${
-          isHovered ? 'translate-y-1/2 opacity-100' : 'translate-y-full opacity-0'
+        className={`absolute left-1/2 bottom-0 -translate-x-1/2 w-3/5 rounded-2xl bg-blue-500 text-white font-medium px-4 py-3 flex items-center justify-center gap-2 transition-all duration-300 ease-out pointer-events-none ${
+          isHovered ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0'
         }`}
       >
         More info

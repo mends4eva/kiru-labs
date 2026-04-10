@@ -80,9 +80,9 @@ export default function Home() {
           <div className="text-center space-y-6 mb-12">
             <FloatingElement>
               <img 
-                src="/kirulabs-logo.png" 
+                src="/kiru-logo.png" 
                 alt="Kirulabs Logo" 
-                className="h-32 sm:h-48 md:h-64 w-auto mx-auto"
+                className="h-40 sm:h-56 md:h-72 w-auto mx-auto drop-shadow-lg"
               />
             </FloatingElement>
 

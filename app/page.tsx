@@ -77,7 +77,7 @@ export default function Home() {
           autoPlay
           loop
           muted
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-full opacity-10 pointer-events-none"
+          className="absolute right-0 top-20 h-96 w-auto opacity-10 pointer-events-none"
         >
           <source src="/funnel-animation.mp4" type="video/mp4" />
         </video>

@@ -96,12 +96,12 @@ export default function Home() {
             </FloatingElement>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Your enterprise,
-              <span className="gradient-accent"> our innovation.</span>
+              Launch Faster.
+              <span className="gradient-accent"> Operate Faster.</span>
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              We believe technology should make life easier, smarter and errot-free. We are dynamic IT and Tech solutions company dedicated to empowering enterprises of all sizes with cutting-edge services that streamline operations and unlock growth
+            At Kirulabs, we believe technology should remove complexity, not create it. We design and deliver smart, scalable solutions that help businesses move faster, work smarter, and grow without limits. Our vision is to become a trusted force in transforming how organizations use technology to unlock their full potential.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">

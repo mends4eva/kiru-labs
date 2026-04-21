@@ -101,7 +101,7 @@ export default function Home() {
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            At Kirulabs, we believe technology should remove complexity, not create it. We design and deliver smart, scalable solutions that help businesses move faster, work smarter, and grow without limits. Our vision is to become a trusted force in transforming how organizations use technology to unlock their full potential.
+            Kirulabs exists to simplify technology and amplify growth. We create smart, scalable solutions that help businesses run efficiently, innovate confidently, and scale sustainably.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
@@ -228,7 +228,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-border/50 pt-8 text-center text-sm text-foreground/60">
-            <p>&copy; 2026 Kirulabs. All rights reserved.</p>
+            <p>&copy; 2024 Kirulabs. All rights reserved.</p>
           </div>
         </div>
       </footer>

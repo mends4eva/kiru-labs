@@ -202,7 +202,7 @@ export default function About() {
       {/* Footer */}
       <footer className="border-t border-border/50 glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center text-sm text-foreground/60">
-          <p>&copy; 2026 Kirulabs. All rights reserved.</p>
+          <p>&copy; 2024 Kirulabs. All rights reserved.</p>
         </div>
       </footer>
     </div>

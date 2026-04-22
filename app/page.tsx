@@ -219,16 +219,16 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#contact" className="hover:text-foreground smooth-all">Contact Us</a></li>
-                <li><a href="#" className="hover:text-foreground smooth-all">Documentation</a></li>
-                <li><a href="#" className="hover:text-foreground smooth-all">Support</a></li>
+              <h4 className="font-semibold mb-4">Products</h4>
+              <ul className="space-y-2">
+                <li><Link href="/ideas" className="hover:text-foreground smooth-all">Solutions</Link></li>
+                <li><Link href="/products/pricing" className="hover:text-foreground smooth-all">Pricing</Link></li>
+                <li><Link href="/products/features" className="hover:text-foreground smooth-all">Features</Link></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-border/50 pt-8 text-center text-sm text-foreground/60">
-            <p>&copy; 2026 Kirulabs. All rights reserved.</p>
+            <p>&copy; 2024 Kirulabs. All rights reserved.</p>
           </div>
         </div>
       </footer>

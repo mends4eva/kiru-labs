@@ -13,6 +13,7 @@ interface Idea {
   category: string
   icon: any
   color: string
+  image?: string
 }
 
 const ideas: Idea[] = [
@@ -22,7 +23,8 @@ const ideas: Idea[] = [
     description: "AI-powered system that learns your business processes and automates repetitive tasks, saving time and reducing errors.",
     category: "AI & Automation",
     icon: Zap,
-    color: "from-blue-500 to-cyan-500"
+    color: "from-blue-500 to-cyan-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 2,
@@ -30,7 +32,8 @@ const ideas: Idea[] = [
     description: "Live business intelligence platform with predictive insights, custom reports, and data visualization for enterprise decision-making.",
     category: "Analytics",
     icon: Brain,
-    color: "from-purple-500 to-pink-500"
+    color: "from-purple-500 to-pink-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 3,
@@ -38,7 +41,8 @@ const ideas: Idea[] = [
     description: "Scalable microservices infrastructure with automatic load balancing, disaster recovery, and 99.99% uptime guarantee.",
     category: "Cloud Infrastructure",
     icon: Cloud,
-    color: "from-orange-500 to-red-500"
+    color: "from-orange-500 to-red-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 4,
@@ -46,7 +50,8 @@ const ideas: Idea[] = [
     description: "Immersive web experiences with 3D elements, animations, and personalized content that engages your audience like never before.",
     category: "Design & UX",
     icon: Palette,
-    color: "from-green-500 to-emerald-500"
+    color: "from-green-500 to-emerald-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 5,
@@ -54,7 +59,8 @@ const ideas: Idea[] = [
     description: "Native mobile experience on web with offline functionality, push notifications, and seamless synchronization across devices.",
     category: "Mobile Solutions",
     icon: Smartphone,
-    color: "from-indigo-500 to-blue-500"
+    color: "from-indigo-500 to-blue-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 6,
@@ -62,7 +68,8 @@ const ideas: Idea[] = [
     description: "Comprehensive cybersecurity framework with zero-trust architecture, encryption, threat detection, and compliance management.",
     category: "Security",
     icon: Shield,
-    color: "from-red-500 to-rose-500"
+    color: "from-red-500 to-rose-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 7,
@@ -70,7 +77,8 @@ const ideas: Idea[] = [
     description: "Intelligent system that creates marketing copy, social media content, and technical documentation tailored to your brand voice.",
     category: "AI & Content",
     icon: Lightbulb,
-    color: "from-yellow-500 to-orange-500"
+    color: "from-yellow-500 to-orange-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 8,
@@ -78,7 +86,8 @@ const ideas: Idea[] = [
     description: "Unified platform for project management, communication, file sharing, and video conferencing with advanced permissions.",
     category: "Collaboration",
     icon: Users,
-    color: "from-teal-500 to-green-500"
+    color: "from-teal-500 to-green-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 9,
@@ -86,7 +95,8 @@ const ideas: Idea[] = [
     description: "Complete development environment with built-in testing, deployment pipelines, and monitoring for rapid application delivery.",
     category: "Development",
     icon: Code2,
-    color: "from-cyan-500 to-blue-500"
+    color: "from-cyan-500 to-blue-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 10,
@@ -94,7 +104,8 @@ const ideas: Idea[] = [
     description: "Multi-language, multi-currency e-commerce platform with CDN optimization, SEO excellence, and conversion optimization.",
     category: "Web Solutions",
     icon: Globe,
-    color: "from-blue-500 to-purple-500"
+    color: "from-blue-500 to-purple-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 11,
@@ -102,7 +113,8 @@ const ideas: Idea[] = [
     description: "Strategic consulting combined with technology implementation to scale your business 10x faster with measurable results.",
     category: "Strategy",
     icon: Rocket,
-    color: "from-rose-500 to-pink-500"
+    color: "from-rose-500 to-pink-500",
+    image: "/placeholder.svg?height=300&width=400"
   },
   {
     id: 12,
@@ -110,7 +122,8 @@ const ideas: Idea[] = [
     description: "Dedicated space for experimenting with emerging technologies, prototyping ideas, and bringing breakthrough innovations to market.",
     category: "Innovation",
     icon: Lightbulb,
-    color: "from-amber-500 to-orange-500"
+    color: "from-amber-500 to-orange-500",
+    image: "/placeholder.svg?height=300&width=400"
   }
 ]
 
@@ -212,6 +225,7 @@ export default function IdeasPage() {
                   title={idea.title}
                   description={idea.description}
                   icon={<IconComponent size={28} />}
+                  image={idea.image}
                 />
               )
             })}

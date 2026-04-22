@@ -15,6 +15,7 @@ interface IdeaDetail {
   benefits: string[]
   icon: React.ReactNode
   color: string
+  image?: string
 }
 
 const ideasData: { [key: string]: IdeaDetail } = {
@@ -41,7 +42,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'ROI within 6-12 months'
     ],
     icon: <Brain className="text-primary" size={32} />,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500',
+    image: '/placeholder.svg?height=400&width=600'
   },
   'cloud-infrastructure': {
     id: 'cloud-infrastructure',
@@ -66,7 +68,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Pay-as-you-go model'
     ],
     icon: <Cloud className="text-primary" size={32} />,
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500',
+    image: '/placeholder.svg?height=400&width=600'
   },
   'data-analytics': {
     id: 'data-analytics',
@@ -91,7 +94,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Faster insights generation'
     ],
     icon: <Zap className="text-primary" size={32} />,
-    color: 'from-orange-500 to-yellow-500'
+    color: 'from-orange-500 to-yellow-500',
+    image: '/placeholder.svg?height=400&width=600'
   },
   'security-solutions': {
     id: 'security-solutions',
@@ -116,7 +120,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Risk mitigation'
     ],
     icon: <Shield className="text-primary" size={32} />,
-    color: 'from-red-500 to-pink-500'
+    color: 'from-red-500 to-pink-500',
+    image: '/placeholder.svg?height=400&width=600'
   },
   'mobile-development': {
     id: 'mobile-development',
@@ -141,7 +146,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Competitive advantage'
     ],
     icon: <Rocket className="text-primary" size={32} />,
-    color: 'from-green-500 to-teal-500'
+    color: 'from-green-500 to-teal-500',
+    image: '/placeholder.svg?height=400&width=600'
   },
   'web-development': {
     id: 'web-development',
@@ -166,7 +172,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Easy maintenance'
     ],
     icon: <Code className="text-primary" size={32} />,
-    color: 'from-indigo-500 to-blue-500'
+    color: 'from-indigo-500 to-blue-500',
+    image: '/placeholder.svg?height=400&width=600'
   },
   'videography-media': {
     id: 'videography-media',
@@ -191,7 +198,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Memorable storytelling'
     ],
     icon: <Video className="text-primary" size={32} />,
-    color: 'from-violet-500 to-purple-500'
+    color: 'from-violet-500 to-purple-500',
+    image: '/placeholder.svg?height=400&width=600'
   },
   'internet-services': {
     id: 'internet-services',
@@ -216,7 +224,8 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Expert support'
     ],
     icon: <Globe className="text-primary" size={32} />,
-    color: 'from-cyan-500 to-blue-500'
+    color: 'from-cyan-500 to-blue-500',
+    image: '/placeholder.svg?height=400&width=600'
   }
 }
 
@@ -270,6 +279,17 @@ export default function IdeaDetailPage() {
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-4xl mx-auto relative z-10">
+          {/* Image Display */}
+          {idea.image && (
+            <div className="mb-8 rounded-2xl overflow-hidden border border-white/20">
+              <img 
+                src={idea.image} 
+                alt={idea.title}
+                className="w-full h-auto object-cover max-h-96"
+              />
+            </div>
+          )}
+          
           <div className="glass-card space-y-6 p-6 sm:p-8 md:p-10">
             <div className="flex items-center gap-4">
               {idea.icon}

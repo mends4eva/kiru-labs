@@ -9,19 +9,31 @@ interface IdeaCardProps {
   title: string
   description: string
   icon: React.ReactNode
+  image?: string
 }
 
-export function IdeaCard({ id, title, description, icon }: IdeaCardProps) {
+export function IdeaCard({ id, title, description, icon, image }: IdeaCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
     <div 
-      className="relative bg-gray-100 border-2 border-gray-400 rounded-3xl p-7 md:p-8 flex flex-col h-full min-h-96 transition-all duration-500 ease-out hover:border-blue-500 hover:shadow-lg group overflow-hidden"
+      className="relative bg-gray-100 border-2 border-gray-400 rounded-3xl overflow-hidden flex flex-col h-full min-h-96 transition-all duration-500 ease-out hover:border-blue-500 hover:shadow-lg group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex flex-col gap-4 flex-grow">
-        <div className="w-12 h-12 flex items-center justify-center text-blue-600">
+      {/* Image Section */}
+      {image && (
+        <div className="relative w-full h-48 overflow-hidden bg-gray-200">
+          <img 
+            src={image} 
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      )}
+
+      <div className="p-7 md:p-8 flex flex-col gap-4 flex-grow">
+        <div className="w-12 h-12 flex items-center justify-center text-blue-600 bg-blue-100 rounded-full">
           {icon}
         </div>
         <h3 className="text-xl font-bold text-black">{title}</h3>

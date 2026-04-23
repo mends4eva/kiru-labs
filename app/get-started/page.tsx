@@ -22,12 +22,17 @@ export default function GetStartedPage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const idea = params.get('idea') || ''
+    const isSubmitted = params.get('submitted')
 
     if (idea) {
       setFormData(prev => ({
         ...prev,
         service: idea,
       }))
+    }
+
+    if (isSubmitted) {
+      setSubmitted(true)
     }
   }, [])
 
@@ -39,16 +44,8 @@ export default function GetStartedPage() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = () => {
     setLoading(true)
-
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData)
-      setSubmitted(true)
-      setLoading(false)
-    }, 1000)
   }
 
   const serviceOptions = [
@@ -101,7 +98,18 @@ export default function GetStartedPage() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="glass-card space-y-6 p-6 sm:p-8">
+              <form
+                action="https://formsubmit.co/kirulabsofficial@gmail.com"
+                method="POST"
+                onSubmit={handleSubmit}
+                className="glass-card space-y-6 p-6 sm:p-8"
+              >
+                {/* Hidden FormSubmit Fields */}
+                <input type="hidden" name="_subject" value="New Kirulabs Request" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="https://v0-kiru-labs.vercel.app/get-started?submitted=true" />
+
                 {/* Company Name */}
                 <div>
                   <label htmlFor="companyName" className="block text-sm font-medium mb-2 text-foreground">

@@ -46,7 +46,7 @@ export default function About() {
       id: 4,
       name: "Emmanuel Billa",
       title: "Community Manager and Brand Ambassador",
-      bio: "Emmanuel is the life of company, he makes sure to communicate the vision of the company to our stakeholders.",
+      bio: "Emmanuel is the life of the company, he makes sure to communicate the vision of the company to our stakeholders.",
       image: "/emmacrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },

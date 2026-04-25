@@ -10,7 +10,7 @@ export default function About() {
       id: 1,
       name: "Selasi Dzeamesi",
       title: "Co-Founder & CEO",
-      bio: "Visionary leader with 15+ years in tech innovation. Sarah drives Kirulabs' mission to democratize liquid glass UI design.",
+      bio: "Visionary leader with 15+ years in tech innovation. Selasi drives Kirulabs' mission to become a leading tech company.",
       image: "/ceo.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
@@ -22,7 +22,7 @@ export default function About() {
       id: 2,
       name: "David Mends",
       title: "Software and Hardware Supervisor",
-      bio: "Engineering genius specializing in animation and UI performance. Marcus built the core tech stack that powers Kirulabs.",
+      bio: "Engineering genius software and hardware operations. David oversees the organisation of the hands that powers Kirulabs.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
       socials: [
         { icon: Linkedin, link: "#" },
@@ -34,7 +34,7 @@ export default function About() {
       id: 3,
       name: "Paa Joe",
       title: "DevOps and Finance",
-      bio: "Award-winning designer pushing the boundaries of modern UI. Elena's vision shaped the unique aesthetic of Kirulabs.",
+      bio: "With a background in finance and devops, Paa has been able to make the company more investible by taking care of neccessary performance metrics.",
       image: "/paacrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
@@ -46,7 +46,7 @@ export default function About() {
       id: 4,
       name: "Emmanuel Billa",
       title: "Community Manager and Brand Ambassador",
-      bio: "Award-winning designer pushing the boundaries of modern UI. Elena's vision shaped the unique aesthetic of Kirulabs.",
+      bio: "Emmanuel is the life of company, he makes sure to communicate the vision of the company to our stakeholders.",
       image: "/emmacrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },

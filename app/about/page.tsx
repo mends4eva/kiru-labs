@@ -138,13 +138,13 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-card space-y-4 sm:space-y-6 hover:border-primary/50 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Our Story</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum leading-relaxed">
               Kirulabs was born from a simple belief: the future of user interfaces lies in the intersection of beauty, performance, and innovation. Our three founders—Sarah, Marcus, and Elena—met at a design conference in 2023 and immediately recognized their shared vision.
             </p>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum leading-relaxed">
               What started as late-night conversations about liquid glass UI has evolved into a comprehensive platform that's changing how developers and designers approach modern interface design. Every feature, every animation, and every glass effect is crafted with precision and purpose.
             </p>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum leading-relaxed">
               Today, Kirulabs empowers creators worldwide to build stunning, performant interfaces that captivate users and drive results. We're just getting started.
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function About() {
             ].map((value, i) => (
               <div key={i} className="glass-card text-center hover:border-primary/50 smooth-all hover:glow-effect p-4 sm:p-5 md:p-6">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 hover:text-primary smooth-all">{value.title}</h3>
-                <p className="text-xs sm:text-sm md:text-base text-foreground/70 leading-relaxed">{value.description}</p>
+                <p className="text-xs sm:text-sm md:text-base tumtum leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -184,7 +184,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Join Our Journey</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto leading-relaxed">
               Be part of the team building the future of digital design with liquid glass innovation
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">

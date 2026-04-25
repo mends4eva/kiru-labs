@@ -193,7 +193,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
+      {/* <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Join Our Journey</h2>
@@ -210,7 +210,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="border-t border-border/50 glass-effect">

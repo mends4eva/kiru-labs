@@ -8,7 +8,7 @@ export default function About() {
   const founders = [
     {
       id: 1,
-      name: "Sarah Chen",
+      name: "Selasi Dzeamesi",
       title: "Co-Founder & CEO",
       bio: "Visionary leader with 15+ years in tech innovation. Sarah drives Kirulabs' mission to democratize liquid glass UI design.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
@@ -20,8 +20,8 @@ export default function About() {
     },
     {
       id: 2,
-      name: "Marcus Rivera",
-      title: "Co-Founder & CTO",
+      name: "David Mends",
+      title: "Software and Hardware Supervisor",
       bio: "Engineering genius specializing in animation and UI performance. Marcus built the core tech stack that powers Kirulabs.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
       socials: [
@@ -32,8 +32,8 @@ export default function About() {
     },
     {
       id: 3,
-      name: "Elena Kowalski",
-      title: "Co-Founder & Design Lead",
+      name: "Paa Joe",
+      title: "DevOps and Finance",
       bio: "Award-winning designer pushing the boundaries of modern UI. Elena's vision shaped the unique aesthetic of Kirulabs.",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
       socials: [

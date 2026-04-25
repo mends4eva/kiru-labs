@@ -169,6 +169,10 @@
   cursor: pointer;
 }
 
+.tumtum {
+  color: #000;
+}
+
 .dark .glass-button {
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.18);

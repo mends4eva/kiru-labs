@@ -109,7 +109,7 @@ export default function About() {
 
                 {/* Info */}
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">{founder.name}</h3>
-                <p className="text-primary/80 font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">{founder.title}</p>
+                <p className="tumtum font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">{founder.title}</p>
                 <p className="text-xs sm:text-sm text-foreground/70 flex-grow mb-4 sm:mb-6 leading-relaxed">{founder.bio}</p>
 
                 {/* Social Links */}

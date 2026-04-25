@@ -11,7 +11,7 @@ export default function About() {
       name: "Selasi Dzeamesi",
       title: "Co-Founder & CEO",
       bio: "Visionary leader with 15+ years in tech innovation. Sarah drives Kirulabs' mission to democratize liquid glass UI design.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      image: "/public/kiru-logo.png",
       socials: [
         { icon: Linkedin, link: "#" },
         { icon: Twitter, link: "#" },

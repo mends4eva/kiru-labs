@@ -10,7 +10,7 @@ export default function About() {
       id: 1,
       name: "Selasi Dzeamesi",
       title: "Co-Founder & CEO",
-      bio: "Visionary leader with 15+ years in tech innovation. Selasi drives Kirulabs' mission to become a leading tech company.",
+      bio: "As a visionary leaderin tech innovation, Selasi drives Kirulabs' mission to become a leading tech company.",
       image: "/ceo.jpg",
       socials: [
         { icon: Linkedin, link: "#" },

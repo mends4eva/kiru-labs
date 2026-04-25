@@ -78,7 +78,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto relative z-10 text-center space-y-4 sm:space-y-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
             Meet the
-            <span className="gradient-accent"> Three Wise Men</span>
+            <span className="gradient-accent"> Team</span>
             <br />
             Behind Kirulabs
           </h1>

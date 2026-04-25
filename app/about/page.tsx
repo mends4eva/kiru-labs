@@ -96,7 +96,7 @@ export default function About() {
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            Visionary leaders united by a passion for innovation and design excellence. Together, we're reimagining the future of digital experiences.
+            Visionary leaders united by a passion for innovation and design excellence. Together, we're reimagining the future of business solutions.
           </p>
         </div>
       </section>

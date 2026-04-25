@@ -120,7 +120,7 @@ export default function About() {
                       <a
                         key={idx}
                         href={social.link}
-                        className="glass-button-icon text-foreground/70 hover:text-primary transition-all duration-300"
+                        className="glass-button-icon tumtum hover:text-primary transition-all duration-300"
                       >
                         <Icon size={16} />
                       </a>

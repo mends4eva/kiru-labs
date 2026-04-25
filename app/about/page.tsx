@@ -167,16 +167,20 @@ export default function About() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {[
               {
-                title: "Innovation First",
-                description: "We push boundaries and reimagine what's possible in UI design"
+                title: "Execution Excellence",
+                description: "We prioritize delivery and results over promises."
               },
               {
-                title: "Design Excellence",
-                description: "Every pixel matters. Beauty and function go hand in hand"
+                title: "Speed with Precision",
+                description: "We move fast, but never at the cost of quality."
               },
               {
-                title: "Performance Obsessed",
-                description: "Smooth animations and fast load times are non-negotiable"
+                title: "Innovation",
+                description: "We embrace new technologies and creative approaches to solve real business problems."
+              },
+              {
+                title: "Collaboration",
+                description: "We work closely with clients as partners, not just service providers."
               }
             ].map((value, i) => (
               <div key={i} className="glass-card text-center hover:border-primary/50 smooth-all hover:glow-effect p-4 sm:p-5 md:p-6">

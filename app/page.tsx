@@ -30,21 +30,21 @@ export default function Home() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Features</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="#features" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">Features</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
-            <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Projects</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="/ideas" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">Projects</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
-            <a href="/about" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">About</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="/about" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">About</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
-            <a href="#contact" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Contact</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="#contact" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">Contact</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
           </div>
 

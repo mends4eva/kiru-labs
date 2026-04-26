@@ -249,7 +249,7 @@ export default function IdeaDetailPage() {
             <h1 className="text-3xl font-bold mb-4">Idea Not Found</h1>
             <p className="text-foreground/70 mb-8">The idea you&apos;re looking for doesn&apos;t exist.</p>
             <Link href="/ideas">
-              <Button variant="default">Back to Ideas</Button>
+              <Button variant="default">Back to Projects</Button>
             </Link>
           </div>
         </section>
@@ -267,7 +267,7 @@ export default function IdeaDetailPage() {
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/ideas">
-              <Button variant="glass" size="sm">Back to Ideas</Button>
+              <Button variant="glass" size="sm">Back to Projects</Button>
             </Link>
           </div>
         </div>

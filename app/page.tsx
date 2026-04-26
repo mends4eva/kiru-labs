@@ -35,7 +35,7 @@ export default function Home() {
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
             <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Ideas</span>
+              <span className="relative z-10">Projects</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
             <a href="/about" className="relative text-foreground hover:text-primary smooth-all group">
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="glass-effect border-t">
             <div className="px-4 py-4 space-y-3">
               <a href="#features" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Features</a>
-              <a href="/ideas" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Ideas</a>
+              <a href="/ideas" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Projects</a>
               <a href="/about" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">About</a>
               <a href="#contact" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Contact</a>
               {/* <Button variant="default" className="w-full">Get Started</Button> */}

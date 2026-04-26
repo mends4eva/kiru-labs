@@ -7,21 +7,8 @@ import { ArrowLeft } from 'lucide-react'
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 glass-effect">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-          </div>
-          <div className="flex items-center gap-6">
-            <Link href="/" className="text-sm hover:text-primary smooth-all">Home</Link>
-            <Link href="/ideas" className="text-sm hover:text-primary smooth-all">Ideas</Link>
-            <Link href="/about" className="text-sm hover:text-primary smooth-all">About</Link>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
-      <section className="pt-28 pb-12 px-4 sm:px-6 lg:px-8">
+      <section className="pt-12 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <Link href="/" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 mb-6">
             <ArrowLeft size={18} />

@@ -171,6 +171,10 @@
   cursor: pointer;
 }
 
+.grey {
+  color: rgb(53, 53, 53);
+}
+
 .tumtum {
   color: #000;
 }

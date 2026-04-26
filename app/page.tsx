@@ -64,13 +64,13 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden glass-effect border-t">
+          <div className="glass-effect border-t">
             <div className="px-4 py-4 space-y-3">
-              <a href="#features" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Features</a>
-              <a href="/ideas" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Ideas</a>
-              <a href="/about" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">About</a>
-              <a href="#contact" className="block text-foreground hover:text-primary hover:bg-white/10 p-2 rounded-lg smooth-all">Contact</a>
-              <Button variant="default" className="w-full">Get Started</Button>
+              <a href="#features" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Features</a>
+              <a href="/ideas" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Ideas</a>
+              <a href="/about" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">About</a>
+              <a href="#contact" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Contact</a>
+              {/* <Button variant="default" className="w-full">Get Started</Button> */}
             </div>
           </div>
         )}
@@ -125,7 +125,7 @@ export default function Home() {
                 <Zap className="text-primary" size={20} />
               </div>
               <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Comprehensive Solutions</h3>
-              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">We cover every aspect of IT, so you dont need multile vendors</p>
+              <p className="text-xs sm:text-sm tumtum leading-relaxed">We cover every aspect of IT, so you dont need multile vendors</p>
             </div>
 
             <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6">
@@ -133,7 +133,7 @@ export default function Home() {
                 <Shield className="text-primary" size={20} />
               </div>
               <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Error-Free Systems</h3>
-              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">Our Mission is to make work more planned, efficient and less prone to mistakes.</p>
+              <p className="text-xs sm:text-sm tumtum leading-relaxed">Our Mission is to make work more planned, efficient and less prone to mistakes.</p>
             </div>
 
             <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6 sm:col-span-2 md:col-span-1">
@@ -141,7 +141,7 @@ export default function Home() {
                 <Rocket className="text-primary" size={20} />
               </div>
               <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Future Ready</h3>
-              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">We combine creativity with technical expertise to deliver solutions that stand out.</p>
+              <p className="text-xs sm:text-sm tumtum leading-relaxed">We combine creativity with technical expertise to deliver solutions that stand out.</p>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16 space-y-2 sm:space-y-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Why Choose Kirulabs</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/60 max-w-2xl mx-auto">We offer the best solutions to your enterprise.</p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto">We offer the best solutions to your enterprise.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
@@ -164,7 +164,7 @@ export default function Home() {
             ].map((item, i) => (
               <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all p-4 sm:p-5 md:p-6">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 group-hover:text-primary smooth-all">{item.title}</h3>
-                <p className="text-xs sm:text-sm md:text-base text-foreground/70 leading-relaxed">{item.desc}</p>
+                <p className="text-xs sm:text-sm md:text-base tumtum leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -176,7 +176,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Ready to Get Started?</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto leading-relaxed">
               Contact us today to discuss how Kirulabs can transform your digital presence with cutting-edge liquid glass design.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
@@ -187,7 +187,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/about" className="block">
-                <Button variant="glass" size="sm" className="w-full text-sm">About Us</Button>
+                <Button variant="glass" size="sm" className="w-full text-sm tumtum">About Us</Button>
               </Link>
             </div>
           </div>
@@ -199,13 +199,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img src="/kirulabs-logo.png" alt="Kirulabs" className="h-10 w-auto mb-4" />
+              <img src="/kirulabs-logo.png" alt="Kirulabs" className="h-22 w-auto" />
               <p className="text-sm text-foreground/60">Enterprise innovation made simple</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-foreground transition-colors">Features</a></li>
+                <li><a href="/ideas" className="hover:text-foreground transition-colors">Ideas</a></li>
               </ul>
             </div>
             <div>

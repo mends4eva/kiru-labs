@@ -170,7 +170,7 @@ export default function GetStartedPage() {
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground focus:border-primary focus:outline-none smooth-all focus:bg-white/15 text-sm sm:text-base"
+                className="w-full px-4 py-3 rounded-lg grey border border-white/20 text-foreground focus:border-primary focus:outline-none smooth-all focus:bg-white/15 text-sm sm:text-base"
               >
                 <option value="">Select a service...</option>
                 {serviceOptions.map((service) => (

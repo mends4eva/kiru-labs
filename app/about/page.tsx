@@ -10,7 +10,7 @@ export default function About() {
       id: 1,
       name: "Selasi Dzeamesi",
       title: "Co-Founder & CEO",
-      bio: "As a visionary leaderin tech innovation, Selasi drives Kirulabs' mission to become a leading tech company.",
+      bio: "As a visionary leader in tech innovation, Selasi drives Kirulabs' mission to become a leading tech company.",
       image: "/ceo.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
@@ -22,7 +22,7 @@ export default function About() {
       id: 2,
       name: "David Mends",
       title: "Software and Hardware Supervisor",
-      bio: "Engineering genius software and hardware operations. David oversees the organisation of the hands that powers Kirulabs.",
+      bio: "Engineering genius, software and hardware operations. David oversees the organisation of the hands that powers Kirulabs.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
       socials: [
         { icon: Linkedin, link: "#" },

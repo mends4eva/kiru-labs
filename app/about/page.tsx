@@ -23,7 +23,7 @@ export default function About() {
       name: "David Mends",
       title: "Software and Hardware Supervisor",
       bio: "Engineering genius, software and hardware operations. David oversees the organisation of the hands that powers Kirulabs.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      image: "/davidcrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
         { icon: Twitter, link: "#" },

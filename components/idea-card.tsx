@@ -9,47 +9,32 @@ interface IdeaCardProps {
   title: string
   description: string
   icon: React.ReactNode
-  category?: string
+  image?: string
 }
 
-export function IdeaCard({ id, title, description, icon, category }: IdeaCardProps) {
+export function IdeaCard({ id, title, description, icon, image }: IdeaCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
-    <StyledWrapper>
-      <div className="card">
-        <div className="content">
-          {/* FRONT: Dark side with centered "Learn more" - visible by default */}
-          <div className="front">
-            <div className="front-content">
-              <div className="icon-wrap">{icon}</div>
-              <Link href={`/ideas/${id}`} className="learn-more">
-                Learn more
-              </Link>
-            </div>
-          </div>
+    <div 
+      className="relative bg-gray-100 border-2 border-gray-400 rounded-3xl overflow-hidden flex flex-col h-full min-h-96 transition-all duration-500 ease-out hover:border-blue-500 hover:shadow-lg group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Image Section */}
+      {image && (
+        <div className="relative w-full h-48 overflow-hidden bg-gray-200">
+          <img 
+            src={image} 
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      )}
 
-          {/* BACK: Colorful side with animations and details - shown on hover */}
-          <div className="back">
-            <div className="img">
-              <div className="circle" />
-              <div className="circle" id="right" />
-              <div className="circle" id="bottom" />
-            </div>
-            <div className="back-content">
-              {category && <div className="badge">{category}</div>}
-
-              <div className="description">
-                <div className="title">
-                  <p>{title}</p>
-                  <svg fillRule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-                    <g style={{ mixBlendMode: 'normal' }} textAnchor="none" fontSize="none" fontWeight="none" fontFamily="none" strokeDashoffset={0} strokeDasharray="0" strokeMiterlimit={10} strokeLinejoin="miter" strokeLinecap="butt" strokeWidth={1} stroke="none" fillRule="nonzero" fill="#20c997">
-                      <g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z" /></g>
-                    </g>
-                  </svg>
-                </div>
-                <p className="card-footer">{description}</p>
-              </div>
-            </div>
-          </div>
+      <div className="p-7 md:p-8 flex flex-col gap-4 flex-grow">
+        <div className="w-12 h-12 flex items-center justify-center text-blue-600 bg-blue-100 rounded-full">
+          {icon}
         </div>
       </div>
     </StyledWrapper>

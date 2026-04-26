@@ -155,15 +155,20 @@ export default function IdeasPage() {
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
             <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Ideas</span>
+              <span className="relative z-10">Projects</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
-            <Link href="/get-started">
-              <Button variant="default" size="sm">Get Started</Button>
+          <div className="flex items-center gap-4">
+            <Link href="/">
+              <Button variant="glass" size="sm">Back Home</Button>
             </Link>
+            <div className="hidden md:flex">
+              <Link href="/get-started">
+                <Button variant="default" size="sm">Get Started</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -174,21 +179,13 @@ export default function IdeasPage() {
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10 text-center space-y-4 sm:space-y-8">
-          <div className="flex justify-center mb-4">
-            <Link href="/">
-              <Button variant="ghost" size="sm" className="gap-2">
-                <ArrowLeft size={16} />
-                Back to Home
-              </Button>
-            </Link>
-          </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
             Our Innovative
-            <span className="gradient-accent"> Ideas</span>
+            <span className="gradient-accent"> Projects</span>
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            Explore our collection of groundbreaking solutions and innovative ideas designed to transform your business and solve real-world challenges.
+            Explore our collection of groundbreaking solutions and innovative projects designed to transform your business and solve real-world challenges.
           </p>
         </div>
       </section>

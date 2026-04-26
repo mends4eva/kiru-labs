@@ -286,6 +286,8 @@ export default function IdeaDetailPage() {
                 src={idea.image} 
                 alt={idea.title}
                 className="w-full h-auto object-cover max-h-96"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           )}

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { IdeaCard } from "@/components/idea-card"
 import Link from "next/link"
-import { ArrowRight, Code2, Brain, Globe, Palette, Zap, Shield, Smartphone, Cloud, Lightbulb, Users, Rocket } from 'lucide-react'
+import { ArrowRight, ArrowLeft, Code2, Brain, Globe, Palette, Zap, Shield, Smartphone, Cloud, Lightbulb, Users, Rocket } from 'lucide-react'
 import { useState } from 'react'
 
 interface Idea {
@@ -174,6 +174,14 @@ export default function IdeasPage() {
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10 text-center space-y-4 sm:space-y-8">
+          <div className="flex justify-center mb-4">
+            <Link href="/">
+              <Button variant="ghost" size="sm" className="gap-2">
+                <ArrowLeft size={16} />
+                Back to Home
+              </Button>
+            </Link>
+          </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
             Our Innovative
             <span className="gradient-accent"> Ideas</span>

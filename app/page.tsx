@@ -16,6 +16,7 @@ export default function Home() {
         autoPlay
         loop
         muted
+        preload="metadata"
         className="absolute inset-x-0 top-16 bottom-0 w-full h-[calc(100%-4rem)] object-cover opacity-10 pointer-events-none z-0"
       >
         <source src="/funnel-animation.mp4" type="video/mp4" />
@@ -79,7 +80,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Meteors Background */}
-        <Meteors number={30} className="bg-slate-400" />
+        <Meteors number={15} className="bg-slate-400" />
 
         {/* Gradient Background Elements */}
         <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
@@ -92,6 +93,8 @@ export default function Home() {
                 src="/kiru-logo.png" 
                 alt="Kirulabs Logo" 
                 className="h-40 sm:h-56 md:h-72 w-auto mx-auto drop-shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </FloatingElement>
 

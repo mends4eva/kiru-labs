@@ -215,7 +215,7 @@ export default function IdeasPage() {
       {/* Ideas Grid */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {filteredIdeas.map((idea) => {
               const IconComponent = idea.icon
               return (
@@ -244,7 +244,7 @@ export default function IdeasPage() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Ready to Bring Your Ideas to Life?</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto leading-relaxed">
               Let's collaborate to transform these innovative ideas into real solutions that drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
@@ -255,7 +255,7 @@ export default function IdeasPage() {
                 </Button>
               </Link>
               <Link href="/" className="block">
-                <Button variant="glass" size="sm" className="w-full text-sm">Back to Home</Button>
+                <Button variant="glass" size="sm" className="w-full text-sm tumtum">Back to Home</Button>
               </Link>
             </div>
           </div>

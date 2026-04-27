@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react'
+import { Mail, Linkedin, Twitter, ArrowRight, Github } from 'lucide-react'
 import Link from "next/link"
 
 export default function About() {
@@ -13,9 +13,9 @@ export default function About() {
       bio: "As a visionary leader in tech innovation, Selasi drives Kirulabs' mission to become a leading tech company.",
       image: "/ceo.jpg",
       socials: [
-        { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
-        { icon: Mail, link: "#" }
+        { icon: Linkedin, link: "https://www.linkedin.com/in/selasi-dzeamesi-818206251/" },
+        { icon: Github, link: "https://github.com/BearForOdin" },
+        { icon: Mail, link: "selasidzeamesi82@gmail.com" }
       ]
     },
     {
@@ -25,9 +25,9 @@ export default function About() {
       bio: "Engineering genius, software and hardware operations. David oversees the organisation of the hands that powers Kirulabs.",
       image: "/davidcrop.jpg",
       socials: [
-        { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
-        { icon: Mail, link: "#" }
+        { icon: Linkedin, link: "https://www.linkedin.com/in/dsmends0/" },
+        { icon: Github, link: "https://github.com/mends4eva" },
+        { icon: Mail, link: "sacketey0@gmail.com" }
       ]
     },
     {
@@ -38,7 +38,7 @@ export default function About() {
       image: "/paacrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
+        { icon: Github, link: "https://github.com/Marrtian1" },
         { icon: Mail, link: "#" }
       ]
     },
@@ -49,9 +49,9 @@ export default function About() {
       bio: "Emmanuel is the life of the company, he makes sure to communicate the vision of the company to our stakeholders.",
       image: "/emmacrop.jpg",
       socials: [
-        { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
-        { icon: Mail, link: "#" }
+        { icon: Linkedin, link: "https://linkedin.com/in/emmanuelbilla" },
+        { icon: Github, link: "https://github.com/emmanuelbilla" },
+        { icon: Mail, link: "immanuelbilla33@gmail.com" }
       ]
     }
   ]

@@ -16,6 +16,7 @@ export default function Home() {
         autoPlay
         loop
         muted
+        preload="metadata"
         className="absolute inset-x-0 top-16 bottom-0 w-full h-[calc(100%-4rem)] object-cover opacity-10 pointer-events-none z-0"
       >
         <source src="/funnel-animation.mp4" type="video/mp4" />
@@ -29,21 +30,21 @@ export default function Home() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Features</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="#features" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">Features</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
-            <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Ideas</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="/ideas" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">Projects</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
-            <a href="/about" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">About</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="/about" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">About</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
-            <a href="#contact" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Contact</span>
-              <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
+            <a href="#contact" className="relative text-foreground hover:text-white smooth-all group px-3 py-2 rounded-lg">
+              <span className="relative z-10 font-medium">Contact</span>
+              <div className="absolute inset-0 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
           </div>
 
@@ -67,7 +68,7 @@ export default function Home() {
           <div className="glass-effect border-t">
             <div className="px-4 py-4 space-y-3">
               <a href="#features" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Features</a>
-              <a href="/ideas" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Ideas</a>
+              <a href="/ideas" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Projects</a>
               <a href="/about" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">About</a>
               <a href="#contact" className="block text-foreground hover:text-primary tumtum p-2 rounded-lg smooth-all">Contact</a>
               {/* <Button variant="default" className="w-full">Get Started</Button> */}
@@ -79,7 +80,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Meteors Background */}
-        <Meteors number={30} className="bg-slate-400" />
+        <Meteors number={15} className="bg-slate-400" />
 
         {/* Gradient Background Elements */}
         <div className="absolute top-20 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
@@ -92,6 +93,8 @@ export default function Home() {
                 src="/kiru-logo.png" 
                 alt="Kirulabs Logo" 
                 className="h-40 sm:h-56 md:h-72 w-auto mx-auto drop-shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </FloatingElement>
 
@@ -205,12 +208,26 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="/ideas" className="hover:text-foreground transition-colors">Ideas</a></li>
+                <li><Link href="/products/features" className="hover:text-foreground transition-colors">Features</Link></li>
+                <li><Link href="/products/pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
+                <li><Link href="/security" className="hover:text-foreground transition-colors">Security</Link></li>
+                <li><a href="/ideas" className="hover:text-foreground transition-colors">Projects</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
+                <li><Link href="/about" className="hover:text-foreground transition-colors">About</Link></li>
+                <li><Link href="/resources/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+                <li><Link href="/company/careers" className="hover:text-foreground transition-colors">Careers</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Products</h4>
+              <ul className="space-y-2">
+                <li><Link href="/ideas" className="hover:text-foreground smooth-all">Solutions</Link></li>
+                <li><Link href="/products/pricing" className="hover:text-foreground smooth-all">Pricing</Link></li>
+                <li><Link href="/products/features" className="hover:text-foreground smooth-all">Features</Link></li>
                 <li><a href="/about" className="hover:text-foreground transition-colors">About</a></li>
               </ul>
             </div>

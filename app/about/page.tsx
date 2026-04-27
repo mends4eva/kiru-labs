@@ -70,7 +70,7 @@ export default function About() {
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
             <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group text-sm">
-              <span className="relative z-10">Ideas</span>
+              <span className="relative z-10">Projects</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
           </div>

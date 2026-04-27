@@ -181,6 +181,14 @@ export default function About() {
               {
                 title: "Collaboration",
                 description: "We work closely with clients as partners, not just service providers."
+              },
+              {
+                title: "Intergrity",
+                description: "We operate with transparency, honesty, and accountability in all client relationships."
+              },
+              {
+                title: "Customer-Centricity",
+                description: "We build solutions around the real needs and goals of our clients."
               }
             ].map((value, i) => (
               <div key={i} className="glass-card text-center hover:border-primary/50 smooth-all hover:glow-effect p-4 sm:p-5 md:p-6">

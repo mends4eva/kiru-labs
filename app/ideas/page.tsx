@@ -191,7 +191,7 @@ export default function IdeasPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-8">
+      {/* <section className="px-4 sm:px-6 lg:px-8 pb-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             <Button
@@ -215,7 +215,7 @@ export default function IdeasPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Ideas Grid */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">

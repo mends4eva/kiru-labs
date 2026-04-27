@@ -184,7 +184,7 @@ export default function IdeasPage() {
             <span className="gradient-accent"> Projects</span>
           </h1>
 
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             Explore our collection of groundbreaking solutions and innovative projects designed to transform your business and solve real-world challenges.
           </p>
         </div>
@@ -198,9 +198,9 @@ export default function IdeasPage() {
               variant={selectedCategory === null ? "default" : "glass"}
               size="sm"
               onClick={() => setSelectedCategory(null)}
-              className="text-xs sm:text-sm"
+              className="text-sm sm:text-base"
             >
-              All Ideas
+              All Projects
             </Button>
             {categories.map(category => (
               <Button
@@ -208,7 +208,7 @@ export default function IdeasPage() {
                 variant={selectedCategory === category ? "default" : "glass"}
                 size="sm"
                 onClick={() => setSelectedCategory(category)}
-                className="text-xs sm:text-sm"
+                className="text-sm sm:text-base"
               >
                 {category}
               </Button>

@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react'
+import { Mail, Linkedin, Github, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
 export default function About() {
@@ -14,7 +14,7 @@ export default function About() {
       image: "/ceo.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
+        { icon: Github, link: "#" },
         { icon: Mail, link: "#" }
       ]
     },
@@ -26,7 +26,7 @@ export default function About() {
       image: "/davidcrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
+        { icon: Github, link: "#" },
         { icon: Mail, link: "#" }
       ]
     },
@@ -38,7 +38,7 @@ export default function About() {
       image: "/paacrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
+        { icon: Github, link: "#" },
         { icon: Mail, link: "#" }
       ]
     },
@@ -50,7 +50,7 @@ export default function About() {
       image: "/emmacrop.jpg",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Twitter, link: "#" },
+        { icon: Github, link: "#" },
         { icon: Mail, link: "#" }
       ]
     }

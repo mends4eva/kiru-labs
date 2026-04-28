@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { Logo } from '@/components/logo'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Zap, Shield, Rocket, Code, Cloud, Brain, Globe, Video } from 'lucide-react'
 import { useParams } from 'next/navigation'
@@ -15,7 +16,6 @@ interface IdeaDetail {
   benefits: string[]
   icon: React.ReactNode
   color: string
-  image?: string
 }
 
 const ideasData: { [key: string]: IdeaDetail } = {
@@ -42,8 +42,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'ROI within 6-12 months'
     ],
     icon: <Brain className="text-primary" size={32} />,
-    color: 'from-purple-500 to-pink-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-purple-500 to-pink-500'
   },
   'cloud-infrastructure': {
     id: 'cloud-infrastructure',
@@ -68,8 +67,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Pay-as-you-go model'
     ],
     icon: <Cloud className="text-primary" size={32} />,
-    color: 'from-blue-500 to-cyan-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-blue-500 to-cyan-500'
   },
   'data-analytics': {
     id: 'data-analytics',
@@ -94,8 +92,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Faster insights generation'
     ],
     icon: <Zap className="text-primary" size={32} />,
-    color: 'from-orange-500 to-yellow-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-orange-500 to-yellow-500'
   },
   'security-solutions': {
     id: 'security-solutions',
@@ -120,8 +117,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Risk mitigation'
     ],
     icon: <Shield className="text-primary" size={32} />,
-    color: 'from-red-500 to-pink-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-red-500 to-pink-500'
   },
   'mobile-development': {
     id: 'mobile-development',
@@ -146,8 +142,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Competitive advantage'
     ],
     icon: <Rocket className="text-primary" size={32} />,
-    color: 'from-green-500 to-teal-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-green-500 to-teal-500'
   },
   'web-development': {
     id: 'web-development',
@@ -172,8 +167,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Easy maintenance'
     ],
     icon: <Code className="text-primary" size={32} />,
-    color: 'from-indigo-500 to-blue-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-indigo-500 to-blue-500'
   },
   'videography-media': {
     id: 'videography-media',
@@ -198,8 +192,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Memorable storytelling'
     ],
     icon: <Video className="text-primary" size={32} />,
-    color: 'from-violet-500 to-purple-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-violet-500 to-purple-500'
   },
   'internet-services': {
     id: 'internet-services',
@@ -224,8 +217,7 @@ const ideasData: { [key: string]: IdeaDetail } = {
       'Expert support'
     ],
     icon: <Globe className="text-primary" size={32} />,
-    color: 'from-cyan-500 to-blue-500',
-    image: '/placeholder.svg?height=400&width=600'
+    color: 'from-cyan-500 to-blue-500'
   }
 }
 
@@ -240,7 +232,7 @@ export default function IdeaDetailPage() {
         <nav className="fixed w-full top-0 z-50 glass-effect border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link href="/">
-              <span className="text-xl font-bold text-white hover:text-primary transition-colors">KIRULABS</span>
+              <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
             </Link>
           </div>
         </nav>
@@ -249,7 +241,7 @@ export default function IdeaDetailPage() {
             <h1 className="text-3xl font-bold mb-4">Idea Not Found</h1>
             <p className="text-foreground/70 mb-8">The idea you&apos;re looking for doesn&apos;t exist.</p>
             <Link href="/ideas">
-              <Button variant="default">Back to Projects</Button>
+              <Button variant="default">Back to Ideas</Button>
             </Link>
           </div>
         </section>
@@ -263,11 +255,11 @@ export default function IdeaDetailPage() {
       <nav className="fixed w-full top-0 z-50 glass-effect border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/">
-            <span className="text-xl font-bold text-white hover:text-primary transition-colors">KIRULABS</span>
+            <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/ideas">
-              <Button variant="glass" size="sm">Back to Projects</Button>
+              <Button variant="glass" size="sm">Back to Ideas</Button>
             </Link>
           </div>
         </div>
@@ -279,19 +271,6 @@ export default function IdeaDetailPage() {
         <div className="absolute bottom-20 left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-4xl mx-auto relative z-10">
-          {/* Image Display */}
-          {idea.image && (
-            <div className="mb-8 rounded-2xl overflow-hidden border border-white/20">
-              <img 
-                src={idea.image} 
-                alt={idea.title}
-                className="w-full h-auto object-cover max-h-96"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          )}
-          
           <div className="glass-card space-y-6 p-6 sm:p-8 md:p-10">
             <div className="flex items-center gap-4">
               {idea.icon}

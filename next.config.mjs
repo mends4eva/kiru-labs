@@ -3,9 +3,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  compiler: {
-    styledComponents: true,
-  },
   images: {
     unoptimized: true,
   },

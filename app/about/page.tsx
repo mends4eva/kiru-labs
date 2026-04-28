@@ -1,57 +1,46 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Mail, Linkedin, Twitter, ArrowRight, Github } from 'lucide-react'
+import { Logo } from "@/components/logo"
+import { Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
 export default function About() {
   const founders = [
     {
       id: 1,
-      name: "Selasi Dzeamesi",
+      name: "Sarah Chen",
       title: "Co-Founder & CEO",
-      bio: "As a visionary leader in tech innovation, Selasi drives Kirulabs' mission to become a leading tech company.",
-      image: "/ceo.jpg",
+      bio: "Visionary leader with 15+ years in tech innovation. Sarah drives Kirulabs' mission to democratize liquid glass UI design.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Github, link: "#" },
+        { icon: Twitter, link: "#" },
         { icon: Mail, link: "#" }
       ]
     },
     {
       id: 2,
-      name: "David Mends",
-      title: "Software and Hardware Supervisor",
-      bio: "Engineering genius, software and hardware operations. David oversees the organisation of the hands that powers Kirulabs.",
-      image: "/davidcrop.jpg",
+      name: "Marcus Rivera",
+      title: "Co-Founder & CTO",
+      bio: "Engineering genius specializing in animation and UI performance. Marcus built the core tech stack that powers Kirulabs.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Github, link: "#" },
+        { icon: Twitter, link: "#" },
         { icon: Mail, link: "#" }
       ]
     },
     {
       id: 3,
-      name: "Paa Joe",
-      title: "DevOps and Finance",
-      bio: "With a background in finance and devops, Paa has been able to make the company more investible by taking care of neccessary performance metrics.",
-      image: "/paacrop.jpg",
+      name: "Elena Kowalski",
+      title: "Co-Founder & Design Lead",
+      bio: "Award-winning designer pushing the boundaries of modern UI. Elena's vision shaped the unique aesthetic of Kirulabs.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
       socials: [
         { icon: Linkedin, link: "#" },
-        { icon: Github, link: "https://github.com/Marrtian1" },
+        { icon: Twitter, link: "#" },
         { icon: Mail, link: "#" }
-      ]
-    },
-    {
-      id: 4,
-      name: "Emmanuel Billa",
-      title: "Community Manager and Brand Ambassador",
-      bio: "Emmanuel is the life of the company, he makes sure to communicate the vision of the company to our stakeholders.",
-      image: "/emmacrop.jpg",
-      socials: [
-        { icon: Linkedin, link: "https://linkedin.com/in/emmanuelbilla" },
-        { icon: Github, link: "https://github.com/emmanuelbilla" },
-        { icon: Mail, link: "immanuelbilla33@gmail.com" }
       ]
     }
   ]
@@ -62,7 +51,7 @@ export default function About() {
       <nav className="fixed w-full top-0 z-50 glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/">
-            <span className="text-xl font-bold text-white hover:text-primary transition-colors">KIRULABS</span>
+            <Logo className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="relative text-foreground hover:text-primary smooth-all group text-sm">
@@ -70,7 +59,7 @@ export default function About() {
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
             <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group text-sm">
-              <span className="relative z-10">Projects</span>
+              <span className="relative z-10">Ideas</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
           </div>
@@ -95,8 +84,8 @@ export default function About() {
             Behind Kirulabs
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            Visionary leaders united by a passion for innovation and design excellence. Together, we're reimagining the future of business solutions.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            Three visionary leaders united by a passion for innovation and design excellence. Together, we're reimagining the future of digital experiences.
           </p>
         </div>
       </section>
@@ -121,8 +110,8 @@ export default function About() {
 
                 {/* Info */}
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">{founder.name}</h3>
-                <p className="tumtum font-semibold mb-3 sm:mb-4 text-sm sm:text-base">{founder.title}</p>
-                <p className="text-sm sm:text-base text-foreground/70 flex-grow mb-4 sm:mb-6 leading-relaxed">{founder.bio}</p>
+                <p className="text-primary/80 font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">{founder.title}</p>
+                <p className="text-xs sm:text-sm text-foreground/70 flex-grow mb-4 sm:mb-6 leading-relaxed">{founder.bio}</p>
 
                 {/* Social Links */}
                 <div className="flex gap-2">
@@ -132,7 +121,7 @@ export default function About() {
                       <a
                         key={idx}
                         href={social.link}
-                        className="glass-button-icon tumtum hover:text-primary transition-all duration-300"
+                        className="glass-button-icon text-foreground/70 hover:text-primary transition-all duration-300"
                       >
                         <Icon size={16} />
                       </a>
@@ -150,11 +139,14 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-card space-y-4 sm:space-y-6 hover:border-primary/50 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Our Story</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum leading-relaxed">
-            Kirulabs is a forward-thinking digital and technology solutions company founded in Ghana in 2024, built to help businesses move from ideas to fully operational systems in record time. The company was established with a clear goal: to eliminate the delays, fragmentation, and inefficiencies that many businesses face when working with multiple service providers.
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 leading-relaxed">
+              Kirulabs was born from a simple belief: the future of user interfaces lies in the intersection of beauty, performance, and innovation. Our three founders—Sarah, Marcus, and Elena—met at a design conference in 2023 and immediately recognized their shared vision.
             </p>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum leading-relaxed">
-            Kirulabs operates at the intersection of technology, creativity, and business execution, delivering integrated solutions that allow clients to launch, run, and grow their operations seamlessly.
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 leading-relaxed">
+              What started as late-night conversations about liquid glass UI has evolved into a comprehensive platform that's changing how developers and designers approach modern interface design. Every feature, every animation, and every glass effect is crafted with precision and purpose.
+            </p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 leading-relaxed">
+              Today, Kirulabs empowers creators worldwide to build stunning, performant interfaces that captivate users and drive results. We're just getting started.
             </p>
           </div>
         </div>
@@ -167,33 +159,21 @@ export default function About() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {[
               {
-                title: "Execution Excellence",
-                description: "We prioritize delivery and results over promises."
+                title: "Innovation First",
+                description: "We push boundaries and reimagine what's possible in UI design"
               },
               {
-                title: "Speed with Precision",
-                description: "We move fast, but never at the cost of quality."
+                title: "Design Excellence",
+                description: "Every pixel matters. Beauty and function go hand in hand"
               },
               {
-                title: "Innovation",
-                description: "We embrace new technologies and creative approaches to solve real business problems."
-              },
-              {
-                title: "Collaboration",
-                description: "We work closely with clients as partners, not just service providers."
-              },
-              {
-                title: "Intergrity",
-                description: "We operate with transparency, honesty, and accountability in all client relationships."
-              },
-              {
-                title: "Customer-Centricity",
-                description: "We build solutions around the real needs and goals of our clients."
+                title: "Performance Obsessed",
+                description: "Smooth animations and fast load times are non-negotiable"
               }
             ].map((value, i) => (
               <div key={i} className="glass-card text-center hover:border-primary/50 smooth-all hover:glow-effect p-4 sm:p-5 md:p-6">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 hover:text-primary smooth-all">{value.title}</h3>
-                <p className="text-xs sm:text-sm md:text-base tumtum leading-relaxed">{value.description}</p>
+                <p className="text-xs sm:text-sm md:text-base text-foreground/70 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -201,11 +181,11 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      {/* <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Join Our Journey</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
               Be part of the team building the future of digital design with liquid glass innovation
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
@@ -218,12 +198,12 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Footer */}
       <footer className="border-t border-border/50 glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center text-sm text-foreground/60">
-          <p>&copy; 2024 Kirulabs. All rights reserved.</p>
+          <p>&copy; 2026 Kirulabs. All rights reserved.</p>
         </div>
       </footer>
     </div>

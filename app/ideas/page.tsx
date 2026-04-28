@@ -1,9 +1,9 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { IdeaCard } from "@/components/idea-card"
+import { Logo } from "@/components/logo"
 import Link from "next/link"
-import { ArrowRight, ArrowLeft, Code2, Brain, Globe, Palette, Zap, Shield, Smartphone, Cloud, Lightbulb, Users, Rocket } from 'lucide-react'
+import { ArrowRight, Code2, Brain, Globe, Palette, Zap, Shield, Smartphone, Cloud, Lightbulb, Users, Rocket } from 'lucide-react'
 import { useState } from 'react'
 
 interface Idea {
@@ -13,7 +13,6 @@ interface Idea {
   category: string
   icon: any
   color: string
-  image?: string
 }
 
 const ideas: Idea[] = [
@@ -23,8 +22,7 @@ const ideas: Idea[] = [
     description: "AI-powered system that learns your business processes and automates repetitive tasks, saving time and reducing errors.",
     category: "AI & Automation",
     icon: Zap,
-    color: "from-blue-500 to-cyan-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-blue-500 to-cyan-500"
   },
   {
     id: 2,
@@ -32,8 +30,7 @@ const ideas: Idea[] = [
     description: "Live business intelligence platform with predictive insights, custom reports, and data visualization for enterprise decision-making.",
     category: "Analytics",
     icon: Brain,
-    color: "from-purple-500 to-pink-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-purple-500 to-pink-500"
   },
   {
     id: 3,
@@ -41,8 +38,7 @@ const ideas: Idea[] = [
     description: "Scalable microservices infrastructure with automatic load balancing, disaster recovery, and 99.99% uptime guarantee.",
     category: "Cloud Infrastructure",
     icon: Cloud,
-    color: "from-orange-500 to-red-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-orange-500 to-red-500"
   },
   {
     id: 4,
@@ -50,8 +46,7 @@ const ideas: Idea[] = [
     description: "Immersive web experiences with 3D elements, animations, and personalized content that engages your audience like never before.",
     category: "Design & UX",
     icon: Palette,
-    color: "from-green-500 to-emerald-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-green-500 to-emerald-500"
   },
   {
     id: 5,
@@ -59,8 +54,7 @@ const ideas: Idea[] = [
     description: "Native mobile experience on web with offline functionality, push notifications, and seamless synchronization across devices.",
     category: "Mobile Solutions",
     icon: Smartphone,
-    color: "from-indigo-500 to-blue-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-indigo-500 to-blue-500"
   },
   {
     id: 6,
@@ -68,8 +62,7 @@ const ideas: Idea[] = [
     description: "Comprehensive cybersecurity framework with zero-trust architecture, encryption, threat detection, and compliance management.",
     category: "Security",
     icon: Shield,
-    color: "from-red-500 to-rose-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-red-500 to-rose-500"
   },
   {
     id: 7,
@@ -77,8 +70,7 @@ const ideas: Idea[] = [
     description: "Intelligent system that creates marketing copy, social media content, and technical documentation tailored to your brand voice.",
     category: "AI & Content",
     icon: Lightbulb,
-    color: "from-yellow-500 to-orange-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-yellow-500 to-orange-500"
   },
   {
     id: 8,
@@ -86,8 +78,7 @@ const ideas: Idea[] = [
     description: "Unified platform for project management, communication, file sharing, and video conferencing with advanced permissions.",
     category: "Collaboration",
     icon: Users,
-    color: "from-teal-500 to-green-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-teal-500 to-green-500"
   },
   {
     id: 9,
@@ -95,8 +86,7 @@ const ideas: Idea[] = [
     description: "Complete development environment with built-in testing, deployment pipelines, and monitoring for rapid application delivery.",
     category: "Development",
     icon: Code2,
-    color: "from-cyan-500 to-blue-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-cyan-500 to-blue-500"
   },
   {
     id: 10,
@@ -104,8 +94,7 @@ const ideas: Idea[] = [
     description: "Multi-language, multi-currency e-commerce platform with CDN optimization, SEO excellence, and conversion optimization.",
     category: "Web Solutions",
     icon: Globe,
-    color: "from-blue-500 to-purple-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-blue-500 to-purple-500"
   },
   {
     id: 11,
@@ -113,8 +102,7 @@ const ideas: Idea[] = [
     description: "Strategic consulting combined with technology implementation to scale your business 10x faster with measurable results.",
     category: "Strategy",
     icon: Rocket,
-    color: "from-rose-500 to-pink-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-rose-500 to-pink-500"
   },
   {
     id: 12,
@@ -122,8 +110,7 @@ const ideas: Idea[] = [
     description: "Dedicated space for experimenting with emerging technologies, prototyping ideas, and bringing breakthrough innovations to market.",
     category: "Innovation",
     icon: Lightbulb,
-    color: "from-amber-500 to-orange-500",
-    image: "/placeholder.svg?height=300&width=400"
+    color: "from-amber-500 to-orange-500"
   }
 ]
 
@@ -141,7 +128,7 @@ export default function IdeasPage() {
       <nav className="sticky top-0 z-50 glass-effect border-b border-white/10 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           <Link href="/">
-            <span className="text-xl font-bold text-white hover:text-primary smooth-all">KIRULABS</span>
+            <Logo className="h-8 w-auto cursor-pointer hover:opacity-80 smooth-all" />
           </Link>
 
           {/* Desktop Menu */}
@@ -155,20 +142,15 @@ export default function IdeasPage() {
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
             <a href="/ideas" className="relative text-foreground hover:text-primary smooth-all group">
-              <span className="relative z-10">Projects</span>
+              <span className="relative z-10">Ideas</span>
               <div className="absolute -inset-2 glass-effect rounded-lg opacity-0 group-hover:opacity-100 smooth-all -z-10"></div>
             </a>
           </div>
 
-          <div className="flex items-center gap-4">
-            <Link href="/">
-              <Button variant="glass" size="sm">Back Home</Button>
+          <div className="hidden md:flex items-center gap-4">
+            <Link href="/get-started">
+              <Button variant="default" size="sm">Get Started</Button>
             </Link>
-            <div className="hidden md:flex">
-              <Link href="/get-started">
-                <Button variant="default" size="sm">Get Started</Button>
-              </Link>
-            </div>
           </div>
         </div>
       </nav>
@@ -181,26 +163,26 @@ export default function IdeasPage() {
         <div className="max-w-7xl mx-auto relative z-10 text-center space-y-4 sm:space-y-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
             Our Innovative
-            <span className="gradient-accent"> Projects</span>
+            <span className="gradient-accent"> Ideas</span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            Explore our collection of groundbreaking solutions and innovative projects designed to transform your business and solve real-world challenges.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            Explore our collection of groundbreaking solutions and innovative ideas designed to transform your business and solve real-world challenges.
           </p>
         </div>
       </section>
 
       {/* Category Filter */}
-      {/* <section className="px-4 sm:px-6 lg:px-8 pb-8">
+      <section className="px-4 sm:px-6 lg:px-8 pb-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             <Button
               variant={selectedCategory === null ? "default" : "glass"}
               size="sm"
               onClick={() => setSelectedCategory(null)}
-              className="text-sm sm:text-base"
+              className="text-xs sm:text-sm"
             >
-              All Projects
+              All Ideas
             </Button>
             {categories.map(category => (
               <Button
@@ -208,30 +190,54 @@ export default function IdeasPage() {
                 variant={selectedCategory === category ? "default" : "glass"}
                 size="sm"
                 onClick={() => setSelectedCategory(category)}
-                className="text-sm sm:text-base"
+                className="text-xs sm:text-sm"
               >
                 {category}
               </Button>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Ideas Grid */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {filteredIdeas.map((idea) => {
               const IconComponent = idea.icon
               return (
-                <IdeaCard
+                <div
                   key={idea.id}
-                  id={idea.id}
-                  title={idea.title}
-                  description={idea.description}
-                  icon={<IconComponent size={28} />}
-                  image={idea.image}
-                />
+                  className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-6 flex flex-col h-full hover:scale-105 transition-transform"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 glass-effect rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-all">
+                      <IconComponent className="text-primary" size={24} />
+                    </div>
+                    <span className="text-xs font-semibold px-3 py-1 glass-effect rounded-full text-primary/80">
+                      {idea.category}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 group-hover:text-primary smooth-all">
+                    {idea.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed mb-6 flex-grow">
+                    {idea.description}
+                  </p>
+
+                  <Link href={`/ideas/${idea.id}`} className="w-full">
+                    <Button
+                      variant="glass"
+                      size="sm"
+                      className="w-full gap-2 text-xs sm:text-sm group-hover:bg-white/20 smooth-all"
+                    >
+                      Learn More
+                      <ArrowRight size={14} />
+                    </Button>
+                  </Link>
+                </div>
               )
             })}
           </div>
@@ -249,7 +255,7 @@ export default function IdeasPage() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Ready to Bring Your Ideas to Life?</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
               Let's collaborate to transform these innovative ideas into real solutions that drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
@@ -260,7 +266,7 @@ export default function IdeasPage() {
                 </Button>
               </Link>
               <Link href="/" className="block">
-                <Button variant="glass" size="sm" className="w-full text-sm tumtum">Back to Home</Button>
+                <Button variant="glass" size="sm" className="w-full text-sm">Back to Home</Button>
               </Link>
             </div>
           </div>

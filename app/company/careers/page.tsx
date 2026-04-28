@@ -6,8 +6,19 @@ import Link from 'next/link'
 export default function CareersPage() {
   return (
     <main className="min-h-screen bg-background">
+      {/* Back Button */}
+      <div className="pt-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <Link href="/">
+            <button className="text-lg font-semibold text-blue-500 hover:text-blue-600 transition-colors">
+              ← Back to Home
+            </button>
+          </Link>
+        </div>
+      </div>
+
       {/* Banner Section */}
-      <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
+      <section className="pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex justify-center">
           <img 
             src="/careers-banner.png" 

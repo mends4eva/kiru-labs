@@ -65,7 +65,10 @@ export default function SocialMediaManagerPage() {
       {/* Form Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass-card p-8 sm:p-12 space-y-6">
+          <form 
+           action="https://formsubmit.co/kirulabsofficial@gmail.com"
+           method="POST"
+           className="glass-card p-8 sm:p-12 space-y-6">
             {/* Full Name */}
             <div>
               <label className="block text-lg font-semibold mb-2">Full Name *</label>
@@ -116,7 +119,7 @@ export default function SocialMediaManagerPage() {
                 value={formData.experience}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-foreground focus:outline-none focus:border-primary text-base sm:text-lg"
+                className="w-full px-4 py-3 tumtum border border-white/20 rounded-lg text-foreground focus:outline-none focus:border-primary text-base sm:text-lg"
               >
                 <option value="">Select experience level</option>
                 <option value="0-1">0-1 years</option>

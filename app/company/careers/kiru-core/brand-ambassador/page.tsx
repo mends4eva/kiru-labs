@@ -124,7 +124,7 @@ export default function BrandAmbassadorPage() {
           value={formData.experience}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-foreground focus:outline-none focus:border-primary text-base sm:text-lg"
+          className="w-full px-4 py-3 tumtum border border-white/20 rounded-lg text-foreground focus:outline-none focus:border-primary text-base sm:text-lg"
         >
           <option value="">Select experience level</option>
           <option value="0-1">0-1 years</option>

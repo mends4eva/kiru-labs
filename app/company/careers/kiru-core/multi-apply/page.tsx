@@ -82,7 +82,10 @@ export default function MultiApplyPage() {
       {/* Form Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass-card p-8 sm:p-12 space-y-6">
+          <form
+            action="https://formsubmit.co/kirulabsofficial@gmail.com"
+            method="POST"
+            className="glass-card p-8 sm:p-12 space-y-6">
             {/* Full Name */}
             <div>
               <label className="block text-lg font-semibold mb-2">Full Name *</label>

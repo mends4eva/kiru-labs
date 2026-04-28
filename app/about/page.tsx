@@ -13,9 +13,9 @@ export default function About() {
       bio: "As a visionary leader in tech innovation, Selasi drives Kirulabs' mission to become a leading tech company.",
       image: "/ceo.jpg",
       socials: [
-        { icon: Linkedin, link: "https://www.linkedin.com/in/selasi-dzeamesi-818206251/" },
-        { icon: Github, link: "https://github.com/BearForOdin" },
-        { icon: Mail, link: "selasidzeamesi82@gmail.com" }
+        { icon: Linkedin, link: "#" },
+        { icon: Github, link: "#" },
+        { icon: Mail, link: "#" }
       ]
     },
     {
@@ -25,9 +25,9 @@ export default function About() {
       bio: "Engineering genius, software and hardware operations. David oversees the organisation of the hands that powers Kirulabs.",
       image: "/davidcrop.jpg",
       socials: [
-        { icon: Linkedin, link: "https://www.linkedin.com/in/dsmends0/" },
-        { icon: Github, link: "https://github.com/mends4eva" },
-        { icon: Mail, link: "sacketey0@gmail.com" }
+        { icon: Linkedin, link: "#" },
+        { icon: Github, link: "#" },
+        { icon: Mail, link: "#" }
       ]
     },
     {
@@ -95,7 +95,7 @@ export default function About() {
             Behind Kirulabs
           </h1>
 
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             Visionary leaders united by a passion for innovation and design excellence. Together, we're reimagining the future of business solutions.
           </p>
         </div>
@@ -121,8 +121,8 @@ export default function About() {
 
                 {/* Info */}
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors">{founder.name}</h3>
-                <p className="tumtum font-semibold mb-3 sm:mb-4 text-xs sm:text-sm">{founder.title}</p>
-                <p className="text-xs sm:text-sm text-foreground/70 flex-grow mb-4 sm:mb-6 leading-relaxed">{founder.bio}</p>
+                <p className="tumtum font-semibold mb-3 sm:mb-4 text-sm sm:text-base">{founder.title}</p>
+                <p className="text-sm sm:text-base text-foreground/70 flex-grow mb-4 sm:mb-6 leading-relaxed">{founder.bio}</p>
 
                 {/* Social Links */}
                 <div className="flex gap-2">

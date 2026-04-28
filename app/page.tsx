@@ -103,7 +103,7 @@ export default function Home() {
               <span className="gradient-accent"> Operate Smarter.</span>
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             Kirulabs exists to simplify technology and amplify growth. We create smart, scalable solutions that help businesses run efficiently, innovate confidently, and scale sustainably.
             </p>
 
@@ -127,24 +127,24 @@ export default function Home() {
               <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
                 <Zap className="text-primary" size={20} />
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Comprehensive Solutions</h3>
-              <p className="text-xs sm:text-sm tumtum leading-relaxed">We cover every aspect of IT, so you dont need multile vendors</p>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">Comprehensive Solutions</h3>
+              <p className="text-sm sm:text-base tumtum leading-relaxed">We cover every aspect of IT, so you dont need multile vendors</p>
             </div>
 
             <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6">
               <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
                 <Shield className="text-primary" size={20} />
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Error-Free Systems</h3>
-              <p className="text-xs sm:text-sm tumtum leading-relaxed">Our Mission is to make work more planned, efficient and less prone to mistakes.</p>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">Error-Free Systems</h3>
+              <p className="text-sm sm:text-base tumtum leading-relaxed">Our Mission is to make work more planned, efficient and less prone to mistakes.</p>
             </div>
 
             <div className="glass-card group hover:glow-effect smooth-all hover:border-primary/50 p-4 sm:p-6 sm:col-span-2 md:col-span-1">
               <div className="w-10 sm:w-14 h-10 sm:h-14 glass-effect rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 smooth-all">
                 <Rocket className="text-primary" size={20} />
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">Future Ready</h3>
-              <p className="text-xs sm:text-sm tumtum leading-relaxed">We combine creativity with technical expertise to deliver solutions that stand out.</p>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">Future Ready</h3>
+              <p className="text-sm sm:text-base tumtum leading-relaxed">We combine creativity with technical expertise to deliver solutions that stand out.</p>
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16 space-y-2 sm:space-y-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Why Choose Kirulabs</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto">We offer the best solutions to your enterprise.</p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl tumtum max-w-2xl mx-auto">We offer the best solutions to your enterprise.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
@@ -166,8 +166,8 @@ export default function Home() {
               { title: "Future-Driven Innovation", desc: "At Kirulabs, we don't just solve today's problems, we design solutions that prepare your enterprise for tomorrow's challenges." },
             ].map((item, i) => (
               <div key={i} className="glass-card group hover:glow-effect hover:border-primary/50 smooth-all p-4 sm:p-5 md:p-6">
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 group-hover:text-primary smooth-all">{item.title}</h3>
-                <p className="text-xs sm:text-sm md:text-base tumtum leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-3 group-hover:text-primary smooth-all">{item.title}</h3>
+                <p className="text-sm sm:text-base md:text-lg tumtum leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

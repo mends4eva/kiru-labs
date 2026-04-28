@@ -38,8 +38,8 @@ export function IdeaCard({ id, title, description, icon, image }: IdeaCardProps)
         <div className="w-12 h-12 flex items-center justify-center text-blue-600 bg-blue-100 rounded-full">
           {icon}
         </div>
-        <h3 className="text-xl font-bold text-black">{title}</h3>
-        <p className="text-gray-500 text-base leading-relaxed">{description}</p>
+        <h3 className="text-2xl font-bold text-black">{title}</h3>
+        <p className="text-gray-500 text-lg leading-relaxed">{description}</p>
       </div>
       
       <Link

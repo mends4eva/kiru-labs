@@ -179,8 +179,8 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-card text-center space-y-6 sm:space-y-8 border-primary/30 hover:border-primary/60 smooth-all hover:glow-effect p-6 sm:p-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Ready to Get Started?</h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl tumtum max-w-2xl mx-auto leading-relaxed">
-              Contact us today to discuss how Kirulabs can transform your digital presence with cutting-edge liquid glass design.
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg tumtum max-w-2xl mx-auto leading-relaxed">
+            Contact us today to discover how Kirulabs can transform your business with innovative tech solutions, smart systems, and cutting-edge digital experiences.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
               <Link href="/get-started" className="block">

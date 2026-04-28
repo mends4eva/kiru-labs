@@ -199,15 +199,15 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-border/50 glass-effect">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <img src="/kirulabs-logo.png" alt="Kirulabs" className="h-22 w-auto" />
-              <p className="text-sm text-foreground/60">Enterprise innovation made simple</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mb-6 sm:mb-8">
+            <div className="col-span-1 sm:col-span-2 md:col-span-1">
+              <img src="/kirulabs-logo.png" alt="Kirulabs" className="h-16 sm:h-20 w-auto mb-2" />
+              <p className="text-xs sm:text-sm text-foreground/60">Enterprise innovation made simple</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-foreground/60">
+              <h4 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">Product</h4>
+              <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-foreground/60">
                 <li><Link href="/products/features" className="hover:text-foreground transition-colors">Features</Link></li>
                 <li><Link href="/products/pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
                 <li><Link href="/security" className="hover:text-foreground transition-colors">Security</Link></li>
@@ -215,30 +215,22 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-foreground/60">
+              <h4 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">Company</h4>
+              <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-foreground/60">
                 <li><Link href="/about" className="hover:text-foreground transition-colors">About</Link></li>
                 <li><Link href="/resources/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
                 <li><Link href="/company/careers" className="hover:text-foreground transition-colors">Careers</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Products</h4>
-              <ul className="space-y-2">
-                <li><Link href="/ideas" className="hover:text-foreground smooth-all">Solutions</Link></li>
-                <li><Link href="/products/pricing" className="hover:text-foreground smooth-all">Pricing</Link></li>
+              <h4 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">Support</h4>
+              <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-foreground/60">
+                <li><Link href="/company/contact" className="hover:text-foreground smooth-all">Contact Us</Link></li>
                 <li><Link href="/products/features" className="hover:text-foreground smooth-all">Features</Link></li>
-                <li><a href="/about" className="hover:text-foreground transition-colors">About</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#contact" className="hover:text-foreground smooth-all">Contact Us</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border/50 pt-8 text-center text-sm text-foreground/60">
+          <div className="border-t border-border/50 pt-4 sm:pt-6 text-center text-xs sm:text-sm text-foreground/60">
             <p>&copy; 2024 Kirulabs. All rights reserved.</p>
           </div>
         </div>

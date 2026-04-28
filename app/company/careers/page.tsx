@@ -6,74 +6,88 @@ import Link from 'next/link'
 export default function CareersPage() {
   return (
     <main className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="pt-12 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center justify-center space-y-8 min-h-[60vh]">
-            {/* Hero Image */}
-            <img 
-              src="/careers-hero.png" 
-              alt="Careers - Jobs for the Youth"
-              className="h-64 sm:h-80 md:h-96 w-auto mx-auto drop-shadow-lg"
-              loading="lazy"
-              decoding="async"
-            />
+      {/* Banner Section */}
+      <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <img 
+            src="/careers-banner.png" 
+            alt="Careers - Jobs for the Youth"
+            className="h-56 sm:h-72 md:h-80 w-auto drop-shadow-xl"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </section>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto text-center leading-relaxed">
+      {/* Main Content */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Description */}
+          <div className="text-center mb-24">
+            <p className="text-xl sm:text-2xl md:text-3xl text-foreground/80 max-w-4xl mx-auto leading-relaxed font-medium">
               Join Kiru Labs and grow your career with us. Explore opportunities as an intern, contractor, or core team member.
             </p>
+          </div>
 
-            {/* Career Categories */}
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mt-12">
-              {/* Interns */}
-              <div className="glass-card p-8 text-center flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Interns</h3>
-                <p className="text-gray-500 text-lg leading-relaxed mb-6 flex-grow">
-                  Get hands-on experience and learn from industry experts.
-                </p>
-                <Button disabled className="w-full" variant="default">
-                  Not Yet Opened
-                </Button>
-                <p className="text-sm text-foreground/60 mt-3">
-                  Follow us on socials for updates
+          {/* Career Cards Grid */}
+          <div className="grid gap-10 md:grid-cols-3 max-w-7xl mx-auto">
+            {/* Interns Card */}
+            <div className="rounded-2xl p-12 flex flex-col bg-white/5 border border-white/10 hover:border-white/20 transition-all">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">Interns</h2>
+              <p className="text-xl sm:text-2xl text-foreground/75 leading-relaxed mb-12 flex-grow">
+                Get hands-on experience and learn from industry experts in a supportive environment.
+              </p>
+              <div className="space-y-4">
+                <button 
+                  disabled 
+                  className="w-full py-5 px-6 text-xl font-semibold rounded-xl bg-gray-500 text-white opacity-50 cursor-not-allowed"
+                >
+                  Coming Soon
+                </button>
+                <p className="text-lg text-foreground/60 text-center">
+                  Check our socials for updates
                 </p>
               </div>
+            </div>
 
-              {/* Contractors */}
-              <div className="glass-card p-8 text-center flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Contractors</h3>
-                <p className="text-gray-500 text-lg leading-relaxed mb-6 flex-grow">
-                  Part-time flexible opportunities to work with us.
-                </p>
-                <Button disabled className="w-full" variant="default">
-                  Not Yet Opened
-                </Button>
-                <p className="text-sm text-foreground/60 mt-3">
-                  Follow us on socials for updates
+            {/* Contractors Card */}
+            <div className="rounded-2xl p-12 flex flex-col bg-white/5 border border-white/10 hover:border-white/20 transition-all">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">Contractors</h2>
+              <p className="text-xl sm:text-2xl text-foreground/75 leading-relaxed mb-12 flex-grow">
+                Part-time flexible opportunities to work on diverse and interesting projects.
+              </p>
+              <div className="space-y-4">
+                <button 
+                  disabled 
+                  className="w-full py-5 px-6 text-xl font-semibold rounded-xl bg-gray-500 text-white opacity-50 cursor-not-allowed"
+                >
+                  Coming Soon
+                </button>
+                <p className="text-lg text-foreground/60 text-center">
+                  Check our socials for updates
                 </p>
               </div>
+            </div>
 
-              {/* Kiru Core */}
-              <div className="glass-card p-8 text-center flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Kiru Core</h3>
-                <p className="text-gray-500 text-lg leading-relaxed mb-6 flex-grow">
-                  Full-time positions with our core team.
-                </p>
-                <Button asChild className="w-full" variant="default">
-                  <Link href="/company/careers/kiru-core">
-                    Explore Positions
-                  </Link>
-                </Button>
-              </div>
+            {/* Kiru Core Card - Highlighted */}
+            <div className="rounded-2xl p-12 flex flex-col bg-blue-600/15 border-2 border-blue-500/50 hover:border-blue-500/70 transition-all">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">Kiru Core</h2>
+              <p className="text-xl sm:text-2xl text-foreground/75 leading-relaxed mb-12 flex-grow">
+                Full-time positions with our core team. Build something amazing and make a lasting impact.
+              </p>
+              <Link href="/company/careers/kiru-core">
+                <button className="w-full py-5 px-6 text-xl font-semibold rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                  View Open Roles
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 glass-effect mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center text-sm text-foreground/60">
+      <footer className="border-t border-border/50 glass-effect mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center text-base text-foreground/60">
           <p>&copy; 2024 Kirulabs. All rights reserved.</p>
         </div>
       </footer>
